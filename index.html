@@ -6,16 +6,16 @@
     
     <!-- SEO ESTRATÉGICO -->
     <title>Energia Solar no Vale do Paraíba | Economia de até 95% | Fonte Energia Solar</title>
-    <meta name="description" content="Instalação de energia solar em São José dos Campos, Jacareí e todo o Vale do Paraíba. Projetos completos, homologação e economia imediata com Gleidson Nascimento.">
+    <meta name="description" content="Instalação de energia solar em São José dos Campos, Jacareí e todo o Vale do Paraíba. Projetos completos e economia imediata com Gleidson Nascimento.">
     <link rel="canonical" href="https://fonteenergiasolar.com.br">
 
-    <!-- Schema.org LocalBusiness Otimizado -->
+    <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Fonte Energia Solar",
-      "image": "https://images.unsplash.com/photo-1509391366360-feaffa648b8b",
+      "image": "img/painel-solar-hero-background.webp",
       "url": "https://fonteenergiasolar.com.br",
       "telephone": "+5512996368707",
       "address": {
@@ -26,19 +26,11 @@
         "postalCode": "12212-655",
         "addressCountry": "BR"
       },
-      "areaServed": [
-        "São José dos Campos",
-        "Jacareí",
-        "Taubaté",
-        "Caçapava",
-        "Pindamonhangaba",
-        "Lorena",
-        "Hortolândia"
-      ]
+      "areaServed": ["São José dos Campos", "Jacareí", "Taubaté", "Caçapava", "Pindamonhangaba", "Lorena", "Hortolândia"]
     }
     </script>
 
-    <!-- FAQ Schema para Rich Results -->
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,7 +41,7 @@
           "name": "Quanto posso economizar com energia solar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A economia pode chegar a até 95%, dependendo do seu perfil de consumo e do projeto instalado pela nossa equipe."
+            "text": "A economia pode chegar a até 95%, dependendo do seu perfil de consumo."
           }
         },
         {
@@ -57,14 +49,14 @@
           "name": "Energia solar funciona em dias nublados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, o sistema continua gerando energia através da radiação difusa, mesmo com baixa incidência solar direta."
+            "text": "Sim, o sistema gera energia através da radiação difusa mesmo sem sol direto."
           }
         }
       ]
     }
     </script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     
@@ -75,6 +67,7 @@
                     colors: {
                         brandNavy: '#07294f',
                         brandGold: '#fdcd06',
+                        brandGray: '#64748b',
                         whatsapp: '#25D366',
                     },
                     fontFamily: {
@@ -88,239 +81,234 @@
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        .hero-mask { mask-image: linear-gradient(to bottom, black 90%, transparent 100%); }
-        input, select, textarea { font-size: 16px !important; }
+        .hero-overlay { background: linear-gradient(to right, rgba(7, 41, 79, 0.85) 20%, rgba(7, 41, 79, 0.4) 100%); }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased overflow-x-hidden">
 
-    <!-- WhatsApp Flutuante Oficial -->
-    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Vi%20o%20site%20e%20gostaria%20de%20um%20orçamento%20de%20energia%20solar." 
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Gostaria%20de%20um%20orçamento%20de%20energia%20solar." 
        target="_blank" 
-       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 shadow-xl rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-slate-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Oficial Gleidson Nascimento" class="w-10 h-10 md:w-12 md:h-12">
+       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 drop-shadow-xl">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16">
     </a>
 
     <!-- Modal Calculadora -->
-    <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl p-6 md:p-10 relative">
-            <button id="close-modal" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-brandNavy"><i data-lucide="x" class="w-6 h-6"></i></button>
+    <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
+        <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8 relative">
+            <button id="close-modal" class="absolute top-5 right-5 text-slate-400 hover:text-brandNavy transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
             
-            <div class="text-center mb-6">
-                <h3 class="text-xl font-bold text-brandNavy mb-1 uppercase tracking-tight">Simular Economia</h3>
-                <p class="text-slate-500 text-xs italic font-medium text-brandGold uppercase tracking-widest">Atendimento Vale do Paraíba</p>
+            <div class="text-center mb-8">
+                <h3 class="text-xl font-bold text-brandNavy uppercase tracking-tight">Simular Economia</h3>
+                <p class="text-brandGray text-[10px] mt-1 uppercase tracking-widest font-bold">Vale do Paraíba</p>
             </div>
 
-            <div class="space-y-5">
-                <div class="text-center">
-                    <label class="text-[10px] font-bold uppercase text-slate-400 tracking-widest block mb-2">Sua fatura média mensal</label>
-                    <div class="relative max-w-[240px] mx-auto">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brandNavy font-bold">R$</span>
-                        <input type="number" id="input-conta" placeholder="0,00" class="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-2 focus:ring-brandGold text-2xl font-bold text-brandNavy text-center">
+            <div class="space-y-6">
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-slate-400 tracking-widest block mb-2 text-center">Fatura média mensal</label>
+                    <div class="relative">
+                        <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-bold text-lg">R$</span>
+                        <input type="number" id="input-conta" placeholder="0,00" class="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-1 focus:ring-brandGold text-2xl font-bold text-brandNavy text-center transition-all">
                     </div>
                 </div>
 
-                <div id="box-resultado" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center border border-white/10">
-                    <p class="text-[10px] uppercase font-bold opacity-60 mb-1">Economia mensal de até</p>
-                    <p id="display-resultado" class="text-3xl font-bold text-brandGold">R$ 0,00</p>
+                <div id="box-resultado" class="hidden p-6 rounded-2xl bg-brandNavy text-white text-center border border-white/10">
+                    <p class="text-[10px] uppercase font-bold opacity-60 mb-1">Economia mensal estimada</p>
+                    <p id="display-resultado" class="text-3xl font-bold text-brandGold tracking-tight font-sans">R$ 0,00</p>
                 </div>
 
-                <div class="space-y-3">
-                    <input id="lead-nome" type="text" placeholder="Qual seu nome?" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 outline-none focus:ring-1 focus:ring-brandGold font-medium">
-                    <button onclick="enviarWhatsLead(event)" class="w-full bg-brandGold text-brandNavy font-bold py-4 rounded-xl active:scale-95 transition-all text-sm uppercase tracking-wider shadow-lg">
-                         Receber Proposta Completa
+                <div class="space-y-3 pt-2">
+                    <input id="lead-nome" type="text" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 outline-none focus:ring-1 focus:ring-brandGold text-sm">
+                    <button onclick="enviarWhatsLead(event)" class="w-full bg-brandGold text-brandNavy font-bold py-4 rounded-xl active:scale-95 transition-all text-xs uppercase tracking-widest shadow-md">
+                         Ver Proposta Detalhada
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-40">
-        <div class="container mx-auto px-5 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-brandNavy rounded flex items-center justify-center text-brandGold text-sm font-bold">F</div>
+    <!-- Header Slim -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-brandNavy rounded-lg flex items-center justify-center text-brandGold font-bold text-xs">F</div>
                 <div class="flex flex-col">
-                    <span class="font-extrabold text-brandNavy text-sm tracking-tighter leading-none uppercase">Fonte Energia</span>
-                    <span class="text-[8px] text-slate-400 font-bold uppercase tracking-[0.1em]">Vale do Paraíba</span>
+                    <span class="font-bold text-brandNavy text-sm tracking-tight uppercase leading-none">Fonte Energia</span>
+                    <span class="text-[8px] text-brandGray font-bold uppercase tracking-[0.1em]">Vale do Paraíba</span>
                 </div>
             </div>
 
-            <nav class="hidden lg:flex items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="#inicio" class="hover:text-brandNavy">Início</a>
-                <a href="#seo-info" class="hover:text-brandNavy">Sobre Nós</a>
-                <div class="relative group h-full py-4">
-                    <span class="flex items-center gap-1 cursor-default hover:text-brandNavy uppercase">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
-                    <div class="absolute top-full left-0 bg-white shadow-2xl rounded-xl border border-slate-100 p-4 min-w-[220px] hidden group-hover:block animate-in fade-in slide-in-from-top-2">
-                        <ul class="space-y-2 text-slate-500 font-medium text-[9px] tracking-wider uppercase">
-                            <li class="hover:text-brandNavy cursor-pointer transition-colors border-b border-slate-50 pb-1 italic">Energia solar em São José dos Campos</li>
-                            <li class="hover:text-brandNavy cursor-pointer transition-colors border-b border-slate-50 pb-1 italic">Energia solar em Jacareí</li>
-                            <li class="hover:text-brandNavy cursor-pointer transition-colors border-b border-slate-50 pb-1 italic">Energia solar em Taubaté</li>
-                            <li class="hover:text-brandNavy cursor-pointer transition-colors border-b border-slate-50 pb-1 italic">Energia solar em Caçapava</li>
-                            <li class="hover:text-brandNavy cursor-pointer transition-colors border-b border-slate-50 pb-1 italic text-brandGold">Ver todas...</li>
+            <nav class="hidden md:flex items-center gap-8 text-[9px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#inicio" class="hover:text-brandNavy transition-colors">Home</a>
+                <a href="#seo-info" class="hover:text-brandNavy transition-colors">Sobre</a>
+                <div class="relative group cursor-default">
+                    <span class="hover:text-brandNavy transition-colors flex items-center gap-1 uppercase">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
+                    <div class="absolute top-full left-0 bg-white shadow-2xl rounded-xl border border-slate-100 p-4 min-w-[220px] hidden group-hover:block mt-2 animate-in fade-in zoom-in-95 duration-200">
+                        <ul class="space-y-2 text-slate-400 font-medium text-[9px] uppercase tracking-wider">
+                            <li class="pb-1 italic border-b border-slate-50">São José dos Campos</li>
+                            <li class="pb-1 italic border-b border-slate-50">Jacareí</li>
+                            <li class="pb-1 italic border-b border-slate-50">Taubaté</li>
+                            <li class="pb-1 italic border-b border-slate-50">Caçapava</li>
+                            <li class="text-brandGold italic pt-1">Em breve novas páginas...</li>
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="text-blue-600 font-extrabold uppercase">Blog</a>
-                <button id="open-calc" class="bg-brandNavy text-white px-4 py-2 rounded-lg flex items-center gap-2 font-bold transition-all hover:bg-slate-800">
-                    <i data-lucide="calculator" class="w-3 h-3 text-brandGold"></i> Calculadora
-                </button>
+                <a href="#" class="text-blue-500 font-extrabold italic">Blog</a>
+                <button id="open-calc" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] hover:bg-slate-800 transition-all font-bold tracking-widest">CALCULADORA</button>
             </nav>
 
-            <button class="md:hidden p-2 text-brandNavy" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6"></i></button>
+            <button class="md:hidden text-brandNavy" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </header>
 
     <!-- Mobile Nav -->
-    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col justify-center items-center gap-8 text-white p-6 transition-all duration-300">
+    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col justify-center items-center gap-10 text-white p-6">
         <button class="absolute top-6 right-6 p-2" id="close-menu"><i data-lucide="x" class="w-8 h-8"></i></button>
-        <a href="#inicio" class="text-2xl font-bold uppercase tracking-tighter">Início</a>
-        <button id="open-calc-mobile" class="text-2xl font-bold text-brandGold uppercase tracking-tighter">Calculadora</button>
-        <a href="#seo-info" class="text-2xl font-bold uppercase tracking-tighter text-slate-400">Sobre</a>
-        <a href="#" class="text-2xl font-bold uppercase tracking-tighter text-blue-400">Blog</a>
-        <div class="text-center pt-8 border-t border-white/10 w-full mt-4">
-            <p class="text-[9px] uppercase opacity-40 font-bold tracking-[0.3em] mb-4 italic">Cidades Atendidas no Vale</p>
-            <p class="text-[10px] opacity-60 leading-relaxed font-medium uppercase tracking-widest italic">SJC • Jacareí • Taubaté • Caçapava • Pinda • Lorena</p>
-        </div>
+        <a href="#inicio" class="text-xl font-bold uppercase tracking-widest">Início</a>
+        <button id="open-calc-mobile" class="text-xl font-bold text-brandGold uppercase tracking-widest italic underline underline-offset-8">Calculadora</button>
+        <a href="#seo-info" class="text-xl font-bold uppercase tracking-widest text-slate-400">Sobre</a>
+        <a href="#" class="text-xl font-bold uppercase tracking-widest text-blue-400">Blog</a>
     </div>
 
     <main>
-        <!-- Hero Section Otimizada para Busca Local -->
-        <section id="inicio" class="pt-12 pb-16 md:py-24 bg-white text-center lg:text-left border-b border-slate-50">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-10 items-center">
-                    <div class="space-y-6 md:space-y-10">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full border border-slate-100">
-                            <span class="w-2 h-2 bg-brandGold rounded-full animate-pulse"></span>
-                            <span class="text-[9px] font-bold uppercase tracking-widest text-slate-500">Autoridade Técnica: Gleidson Nascimento</span>
-                        </div>
-                        <h1 class="text-4xl md:text-7xl font-extrabold text-brandNavy leading-tight tracking-tight uppercase">
-                            Energia Solar no Vale do Paraíba com economia de até <span class="text-brandGold italic">95%.</span>
-                        </h1>
-                        <h2 class="text-base md:text-2xl text-slate-500 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
-                            Instalação de energia solar residencial e comercial em São José dos Campos, Jacareí e região com projeto e homologação.
-                        </h2>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 font-bold uppercase tracking-wider text-xs">
-                            <button onclick="document.getElementById('open-calc').click()" class="bg-brandNavy text-white px-10 py-5 rounded-2xl shadow-2xl flex items-center justify-center gap-3 transition-transform hover:scale-105 active:scale-95">
-                                <i data-lucide="calculator" class="w-5 h-5 text-brandGold"></i> Simular Agora
-                            </button>
-                            <a href="tel:12996368707" class="border-2 border-slate-200 px-10 py-5 rounded-2xl text-brandNavy hover:bg-slate-50 flex items-center justify-center gap-3 transition-colors">
-                                <i data-lucide="phone" class="w-5 h-5"></i> Ligar Agora
-                            </a>
-                        </div>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative min-h-[500px] md:min-h-[620px] flex items-center bg-brandNavy overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="img/painel-solar-hero-background.webp" 
+                     alt="Instalação de energia solar em São José dos Campos e Vale do Paraíba" 
+                     class="w-full h-full object-cover opacity-50"
+                     loading="eager">
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl text-center md:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                        <span class="w-2 h-2 bg-brandGold rounded-full animate-pulse"></span>
+                        <span class="text-[8px] font-bold uppercase tracking-[0.2em] text-white/90">Especialista: Gleidson Nascimento</span>
                     </div>
-                    <div class="relative hidden lg:block group">
-                        <img src="https://images.unsplash.com/photo-1509391366360-feaffa648b8b?auto=format&fit=crop&q=80&w=1200" 
-                             alt="Instalação de energia solar em São José dos Campos e Vale do Paraíba" 
-                             class="rounded-[3rem] shadow-xl hero-mask transition-transform duration-500 group-hover:scale-[1.02]"
-                             loading="lazy">
-                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-50 text-center">
-                            <p class="text-2xl font-bold text-brandNavy leading-none">25 Anos</p>
-                            <p class="text-[8px] font-bold uppercase text-slate-400 tracking-widest mt-1">Garantia de Performance</p>
-                        </div>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight uppercase">
+                        Energia Solar no Vale do Paraíba <br class="hidden md:block">com economia de até <span class="text-brandGold italic">95%.</span>
+                    </h1>
+                    <h2 class="text-xs md:text-lg text-slate-200 max-w-xl font-medium leading-relaxed italic opacity-90">
+                        Instalação residencial e comercial em São José dos Campos, Jacareí e região com projeto e homologação profissional.
+                    </h2>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                        <button onclick="document.getElementById('open-calc').click()" class="bg-brandGold text-brandNavy px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:scale-105 active:scale-95 transition-all shadow-xl">
+                            Calcular Economia
+                        </button>
+                        <a href="tel:12996368707" class="border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white/10 transition-colors flex items-center justify-center gap-2 tracking-widest">
+                            <i data-lucide="phone" class="w-4 h-4"></i> Ligar Agora
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Faixa de Cidades (SEO REAL) -->
-        <section class="py-16 bg-slate-50 border-b border-slate-100">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                <h2 class="text-2xl font-extrabold text-brandNavy mb-10 uppercase tracking-tighter underline decoration-brandGold decoration-4 underline-offset-8">
-                    Atendemos todo o Vale do Paraíba
-                </h2>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs font-bold text-slate-500 uppercase tracking-widest italic">
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em São José dos Campos</li>
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em Jacareí</li>
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em Taubaté</li>
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em Caçapava</li>
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em Pindamonhangaba</li>
-                    <li class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-all hover:text-brandNavy">Energia solar em Lorena</li>
-                </ul>
+        <!-- Seção Cidades SEO (CORRIGIDA - SEM CÓDIGO APARENTE) -->
+        <section class="py-12 bg-white border-b border-slate-50">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <p class="text-center text-[9px] uppercase font-bold text-slate-400 tracking-[0.3em] mb-10 italic">Atendimento Especializado em toda a região</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">São José dos Campos</p></div>
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">Jacareí</p></div>
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">Taubaté</p></div>
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">Caçapava</p></div>
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">Pindamonhangaba</p></div>
+                    <div class="text-center border-b border-slate-50 pb-2"><p class="text-[9px] font-bold text-brandNavy uppercase tracking-widest opacity-60">Lorena</p></div>
+                </div>
             </div>
         </section>
 
-        <!-- SEO Semântico (Autoridade) -->
-        <section id="seo-info" class="py-20 md:py-32 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                <h2 class="text-2xl md:text-4xl font-extrabold text-brandNavy mb-8 uppercase tracking-tight leading-tight font-sans">
-                    Referência em Instalação de Painéis Solares no Vale
+        <!-- Seção de Autoridade & SEO -->
+        <section id="seo-info" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-xl md:text-3xl font-extrabold text-brandNavy mb-10 uppercase tracking-tight leading-snug">
+                    Sua Referência em Energia Fotovoltaica no Vale
                 </h2>
-                <div class="space-y-8 text-sm md:text-lg text-slate-600 leading-relaxed font-normal italic">
+                <div class="space-y-8 text-xs md:text-base text-slate-500 leading-relaxed font-normal">
                     <p>
-                        A <strong>Fonte Energia Solar</strong>, sob a consultoria direta de <strong>Gleidson Nascimento</strong>, é reconhecida pela excelência técnica em sistemas fotovoltaicos. Nossa equipe atua em todo o <strong>Vale do Paraíba</strong>, entregando liberdade energética para famílias e empresários que desejam se proteger dos constantes aumentos tarifários.
+                        A <strong>Fonte Energia Solar</strong>, liderada pelo representante autorizado <strong>Gleidson Nascimento</strong>, atua com rigor técnico em todo o Vale do Paraíba. Nossa missão é entregar liberdade energética real para residências e empresas, cuidando de todo o processo de engenharia e homologação junto à concessionária.
                     </p>
                     <p>
-                        Diferente de sistemas amadores, entregamos um projeto de engenharia de alta performance, cuidando de cada detalhe da homologação junto à concessionária (EDP). O resultado é uma economia imediata de até 95% na conta de luz e a valorização real do seu imóvel em cidades como São José dos Campos, Jacareí e Taubaté.
+                        Garantimos uma redução imediata de custos fixos em cidades estratégicas como SJC, Jacareí e Taubaté, utilizando equipamentos de alto padrão com garantias estendidas, valorizando seu patrimônio e gerando sustentabilidade para o futuro.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Visual (SEO + Conversão) -->
-        <section id="faq" class="py-20 bg-slate-50 border-y border-slate-100">
-            <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="text-2xl font-extrabold text-brandNavy text-center mb-12 uppercase tracking-tighter">Dúvidas Frequentes</h2>
-                <div class="space-y-4">
-                    <details class="group bg-white rounded-2xl border border-slate-100 p-6 cursor-pointer open:ring-2 open:ring-brandGold transition-all duration-300">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center uppercase text-[10px] tracking-widest leading-none">
-                            Quanto posso economizar com energia solar?
-                            <i data-lucide="plus" class="w-4 h-4 transition-transform group-open:rotate-45 text-brandGold"></i>
+        <!-- Benefícios Minimalistas -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="grid md:grid-cols-3 gap-6 font-sans">
+                    <div class="p-8 rounded-2xl bg-white border border-slate-100 space-y-4 shadow-sm">
+                        <i data-lucide="shield-check" class="text-brandNavy w-6 h-6"></i>
+                        <h4 class="font-bold text-brandNavy uppercase text-[10px] tracking-[0.2em]">Garantia de 25 Anos</h4>
+                        <p class="text-[11px] text-slate-500 leading-relaxed italic">Performance garantida a longo prazo com equipamentos certificados.</p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-brandNavy text-white space-y-4 shadow-xl">
+                        <i data-lucide="trending-down" class="text-brandGold w-6 h-6"></i>
+                        <h4 class="font-bold text-brandGold uppercase text-[10px] tracking-[0.2em]">Economia Máxima</h4>
+                        <p class="text-[11px] text-slate-300 leading-relaxed italic opacity-90">Redução drástica na fatura e proteção total contra inflação energética.</p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-100 space-y-4 shadow-sm">
+                        <i data-lucide="zap" class="text-brandNavy w-6 h-6"></i>
+                        <h4 class="font-bold text-brandNavy uppercase text-[10px] tracking-[0.2em]">Projeto Completo</h4>
+                        <p class="text-[11px] text-slate-500 leading-relaxed italic">Engenharia, documentação e ativação 100% por nossa conta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Slim -->
+        <section id="faq" class="py-16 bg-slate-50 border-y border-slate-100">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <h3 class="text-sm font-extrabold text-brandGray text-center mb-10 uppercase tracking-[0.4em] italic opacity-40 leading-none">Dúvidas Frequentes</h3>
+                <div class="space-y-2">
+                    <details class="group bg-white rounded-xl border border-slate-100 p-5 cursor-pointer transition-all duration-300">
+                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center uppercase text-[8px] tracking-widest leading-none">
+                            O sistema gera energia em dias nublados?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
                         </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-medium italic">A economia pode chegar a até 95%, dependendo do seu perfil de consumo e do dimensionamento do projeto instalado pela nossa equipe.</p>
+                        <p class="mt-4 text-slate-500 text-[10px] leading-relaxed font-medium italic opacity-70">Sim, a tecnologia atual permite captar radiação difusa, mantendo a produção de energia constante.</p>
                     </details>
-                    <details class="group bg-white rounded-2xl border border-slate-100 p-6 cursor-pointer open:ring-2 open:ring-brandGold transition-all duration-300">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center uppercase text-[10px] tracking-widest leading-none">
-                            Energia solar funciona em dias nublados?
-                            <i data-lucide="plus" class="w-4 h-4 transition-transform group-open:rotate-45 text-brandGold"></i>
+                    <details class="group bg-white rounded-xl border border-slate-100 p-5 cursor-pointer transition-all duration-300">
+                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center uppercase text-[8px] tracking-widest leading-none">
+                            Qual a valorização do imóvel?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
                         </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-medium italic">Sim! O sistema continua gerando energia mesmo em dias nublados ou chuvosos através da radiação difusa, garantindo uma produção constante ao longo do ano.</p>
-                    </details>
-                    <details class="group bg-white rounded-2xl border border-slate-100 p-6 cursor-pointer open:ring-2 open:ring-brandGold transition-all duration-300">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center uppercase text-[10px] tracking-widest leading-none">
-                            Qual a manutenção necessária?
-                            <i data-lucide="plus" class="w-4 h-4 transition-transform group-open:rotate-45 text-brandGold"></i>
-                        </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-medium italic">A manutenção é mínima, consistindo basicamente na limpeza periódica das placas e vistoria técnica do inversor para garantir a eficiência máxima de 25 anos.</p>
+                        <p class="mt-4 text-slate-500 text-[10px] leading-relaxed font-medium italic opacity-70">Estudos imobiliários mostram uma valorização média de até 20% para casas com energia solar.</p>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- Contato Focado em Conversão -->
-        <section id="contato" class="py-20 md:py-32 bg-brandNavy text-white">
-            <div class="container mx-auto px-6 text-center md:text-left">
+        <!-- Contato Minimalista -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-10">
-                        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight uppercase leading-[1.1]">Pronto para <br><span class="text-brandGold italic">zerar sua conta?</span></h2>
-                        
-                        <div class="grid gap-8">
-                            <div class="flex items-center gap-5 justify-center md:justify-start group">
-                                <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-brandGold shadow-inner group-hover:bg-brandGold group-hover:text-brandNavy transition-all"><i data-lucide="user" class="w-6 h-6"></i></div>
-                                <div class="text-left leading-tight">
-                                    <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest mb-1 leading-none">Especialista Regional</p>
-                                    <p class="font-bold text-base uppercase leading-none">Gleidson Nascimento</p>
-                                </div>
+                    <div class="space-y-8 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-brandNavy uppercase leading-tight tracking-tighter leading-none">Pague o Sol, <br><span class="text-brandGold italic">não a conta de luz.</span></h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 justify-center md:justify-start grayscale opacity-50">
+                                <i data-lucide="user" class="w-4 h-4"></i>
+                                <span class="text-[9px] font-bold uppercase tracking-widest">Gleidson Nascimento</span>
                             </div>
-                            <div class="flex items-center gap-5 justify-center md:justify-start group">
-                                <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-brandGold shadow-inner group-hover:bg-brandGold group-hover:text-brandNavy transition-all"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
-                                <div class="text-left leading-tight">
-                                    <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest mb-1 leading-none">Endereço do Representante</p>
-                                    <p class="font-medium text-xs uppercase tracking-tighter opacity-80 leading-tight">R. Francisco João Leme, 83 - Vila Sinha, SJC</p>
-                                </div>
+                            <div class="flex items-center gap-4 justify-center md:justify-start grayscale opacity-50">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                <span class="text-[9px] font-bold uppercase tracking-widest">R. Francisco João Leme, 83 - Vila Sinha, SJC</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl text-slate-900 border border-white/10">
-                        <h3 class="text-2xl font-bold text-brandNavy mb-8 text-center uppercase tracking-tight leading-none italic underline decoration-brandGold decoration-4 underline-offset-8">Solicitar Proposta</h3>
-                        <form class="space-y-4" onsubmit="enviarWhatsGeral(event)">
-                            <input id="nome-geral" type="text" placeholder="Como te chamamos?" class="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-100 outline-none focus:ring-1 focus:ring-brandGold font-medium text-sm" required>
-                            <input id="valor-geral" type="number" placeholder="Fatura média (R$)" class="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-100 outline-none focus:ring-1 focus:ring-brandGold font-medium text-sm" required>
-                            <button class="w-full bg-brandNavy text-white font-bold py-5 rounded-2xl active:scale-95 transition-all text-sm uppercase tracking-widest shadow-lg font-sans">
-                                Enviar para o WhatsApp
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+                        <h4 class="text-[10px] font-bold text-brandGray mb-6 uppercase tracking-[0.3em] text-center">Falar com o Representante</h4>
+                        <form class="space-y-3" onsubmit="enviarWhatsGeral(event)">
+                            <input id="nome-geral" type="text" placeholder="Nome" class="w-full px-5 py-4 bg-white rounded-lg border border-slate-200 outline-none focus:ring-1 focus:ring-brandGold text-sm font-medium">
+                            <input id="valor-geral" type="number" placeholder="Fatura média (R$)" class="w-full px-5 py-4 bg-white rounded-lg border border-slate-200 outline-none focus:ring-1 focus:ring-brandGold text-sm font-medium">
+                            <button class="w-full bg-brandNavy text-white font-bold py-4 rounded-lg active:scale-95 transition-all text-[10px] uppercase tracking-[0.3em] shadow-lg mt-2">
+                                Enviar WhatsApp
                             </button>
-                            <p class="text-[9px] text-center text-slate-400 font-bold uppercase tracking-widest pt-4">Gleidson entrará em contato em minutos</p>
                         </form>
                     </div>
                 </div>
@@ -328,17 +316,16 @@
         </section>
     </main>
 
-    <footer class="py-12 bg-white text-center border-t border-slate-100">
+    <footer class="py-10 bg-white text-center border-t border-slate-100 opacity-40 grayscale">
         <div class="container mx-auto px-6">
-            <p class="text-[9px] font-black uppercase tracking-[0.5em] text-slate-300 mb-2 leading-none uppercase">Fonte Energia Solar Vale</p>
-            <p class="text-[8px] text-slate-400 uppercase tracking-widest font-medium italic opacity-60">Developed by Rafael for Gleidson Nascimento © 2026</p>
+            <p class="text-[8px] font-black uppercase tracking-[0.5em] mb-1">Fonte Energia Solar Vale</p>
+            <p class="text-[7px] uppercase tracking-widest italic leading-none">Desenvolvido por Rafael para Gleidson Nascimento © 2026</p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
 
-        // Lógica do Modal
         const modal = document.getElementById('modal-calc');
         const openBtn = document.getElementById('open-calc');
         const openBtnMobile = document.getElementById('open-calc-mobile');
@@ -351,7 +338,7 @@
             modal.classList.toggle('hidden', !show);
             modal.classList.toggle('flex', show);
             document.body.style.overflow = show ? 'hidden' : 'auto';
-            if(show) inputConta.focus();
+            if(show) setTimeout(() => inputConta.focus(), 150);
         };
 
         if(openBtn) openBtn.onclick = () => toggleModal(true);
@@ -359,7 +346,6 @@
         if(closeBtn) closeBtn.onclick = () => toggleModal(false);
         modal.onclick = (e) => { if(e.target === modal) toggleModal(false); };
 
-        // Calculadora
         inputConta.addEventListener('input', (e) => {
             let val = parseFloat(e.target.value);
             if(val > 0) {
@@ -375,8 +361,8 @@
             e.preventDefault();
             let nome = document.getElementById("lead-nome").value;
             let conta = inputConta.value;
-            if(!nome || !conta) return alert("Preencha seu nome e valor!");
-            let msg = `Olá Gleidson! Sou ${nome} e vi no site que posso economizar R$ ${(conta*0.95).toFixed(2)} para minha conta de R$ ${conta}. Gostaria da proposta.`;
+            if(!nome || !conta) return alert("Preencha os campos!");
+            let msg = `Olá Gleidson! Sou ${nome} e vi que posso economizar R$ ${(conta*0.95).toFixed(2)} mensalmente. Gostaria da proposta.`;
             window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
         }
 
@@ -384,21 +370,15 @@
             e.preventDefault();
             let nome = document.getElementById("nome-geral").value;
             let valor = document.getElementById("valor-geral").value;
-            if(!nome || !valor) return alert("Por favor, preencha nome e valor.");
-            let msg = `Olá Gleidson! Sou ${nome} e minha conta média é de R$ ${valor}. Gostaria de solicitar um estudo técnico para o Vale do Paraíba.`;
+            if(!nome || !valor) return alert("Preencha nome e valor!");
+            let msg = `Olá Gleidson! Sou ${nome} e minha conta média é de R$ ${valor}. Quero saber sobre energia solar para o Vale do Paraíba.`;
             window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
         }
 
-        // Mobile Nav
         const menuBtn = document.getElementById('mobile-menu-btn');
         const closeNav = document.getElementById('close-menu');
         const mobileNav = document.getElementById('mobile-nav');
-        
-        const toggleNav = (show) => {
-            mobileNav.classList.toggle('hidden', !show);
-            mobileNav.classList.toggle('flex', show);
-        };
-
+        const toggleNav = (show) => { mobileNav.classList.toggle('hidden', !show); mobileNav.classList.toggle('flex', show); };
         if(menuBtn) menuBtn.onclick = () => toggleNav(true);
         if(closeNav) closeNav.onclick = () => toggleNav(false);
     </script>
