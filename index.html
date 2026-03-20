@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO ESTRATÉGICO -->
     <title>Energia Solar no Vale do Paraíba | Economia de até 95% | Fonte Energia Solar</title>
@@ -52,317 +52,244 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        .section-spacing { padding: 5rem 0; }
+        .hero-mask { mask-image: linear-gradient(to bottom, black 90%, transparent 100%); }
+        input, select, textarea { font-size: 16px !important; }
     </style>
 </head>
-<body class="bg-white text-slate-800 antialiased">
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
 
     <!-- WhatsApp Flutuante Oficial -->
     <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Vi%20o%20site%20e%20gostaria%20de%20um%20orçamento%20de%20energia%20solar." 
        target="_blank" 
-       class="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform duration-300 shadow-2xl rounded-full">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16">
+       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 shadow-xl rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-slate-100">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-10 h-10 md:w-12 md:h-12">
     </a>
 
-    <!-- Modal Calculadora -->
-    <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl p-10 relative">
-            <button id="close-modal" class="absolute top-6 right-6 text-slate-400 hover:text-brandNavy"><i data-lucide="x"></i></button>
+    <!-- Modal Calculadora Otimizado -->
+    <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl p-6 md:p-10 relative">
+            <button id="close-modal" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-brandNavy"><i data-lucide="x" class="w-6 h-6"></i></button>
             
-            <div class="text-center mb-8">
-                <h3 class="text-2xl font-bold text-brandNavy mb-2 uppercase tracking-tight">Simular Economia</h3>
-                <p class="text-slate-500 text-sm italic">Baseado no consumo do Vale do Paraíba</p>
+            <div class="text-center mb-6">
+                <h3 class="text-xl font-bold text-brandNavy mb-1 uppercase tracking-tight">Simular Economia</h3>
+                <p class="text-slate-500 text-xs font-medium text-brandGold uppercase tracking-widest">Vale do Paraíba</p>
             </div>
 
-            <div class="space-y-6">
-                <div>
-                    <label class="text-xs font-bold uppercase text-slate-400 tracking-wider block mb-2">Valor médio da conta de luz</label>
-                    <div class="relative">
-                        <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-bold">R$</span>
-                        <input type="number" id="input-conta" placeholder="0,00" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-5 pl-12 pr-6 outline-none focus:ring-2 focus:ring-brandGold text-3xl font-bold text-brandNavy transition-all">
+            <div class="space-y-5">
+                <div class="text-center">
+                    <label class="text-[10px] font-bold uppercase text-slate-400 tracking-widest block mb-2">Sua fatura média mensal</label>
+                    <div class="relative max-w-[240px] mx-auto">
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brandNavy font-bold">R$</span>
+                        <input type="number" id="input-conta" placeholder="0,00" class="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-2 focus:ring-brandGold text-2xl font-bold text-brandNavy text-center">
                     </div>
                 </div>
 
-                <div id="box-resultado" class="hidden p-6 rounded-2xl bg-brandNavy text-white text-center">
-                    <p class="text-xs uppercase opacity-70 mb-1">Economia mensal de até:</p>
-                    <p id="display-resultado" class="text-4xl font-bold text-brandGold tracking-tight">R$ 0,00</p>
+                <div id="box-resultado" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center">
+                    <p class="text-[10px] uppercase font-bold opacity-60 mb-1">Economia mensal de até</p>
+                    <p id="display-resultado" class="text-3xl font-bold text-brandGold">R$ 0,00</p>
                 </div>
 
-                <div class="pt-2">
-                    <input id="lead-nome" type="text" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-5 mb-4 outline-none focus:ring-2 focus:ring-brandGold">
-                    <button onclick="enviarWhatsLead(event)" class="w-full bg-brandGold text-brandNavy font-bold py-5 rounded-2xl hover:bg-yellow-500 transition-all text-lg uppercase tracking-wide">
-                         Receber Estudo Completo
+                <div class="space-y-3">
+                    <input id="lead-nome" type="text" placeholder="Qual seu nome?" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 outline-none focus:ring-1 focus:ring-brandGold">
+                    <button onclick="enviarWhatsLead(event)" class="w-full bg-brandGold text-brandNavy font-bold py-4 rounded-xl active:scale-95 transition-all text-sm uppercase tracking-wider shadow-lg">
+                         Receber Proposta Completa
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Header Clean -->
+    <!-- Header Sticky -->
     <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-5 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-brandNavy rounded-lg flex items-center justify-center text-brandGold font-bold">
-                    S
-                </div>
+                <div class="w-8 h-8 bg-brandNavy rounded flex items-center justify-center text-brandGold text-sm font-bold">F</div>
                 <div class="flex flex-col">
-                    <span class="font-bold text-brandNavy text-lg tracking-tighter leading-none uppercase">Fonte Energia</span>
-                    <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest">Vale do Paraíba</span>
+                    <span class="font-extrabold text-brandNavy text-sm tracking-tighter leading-none uppercase">Fonte Energia</span>
+                    <span class="text-[8px] text-slate-400 font-bold uppercase tracking-[0.1em]">Vale do Paraíba</span>
                 </div>
             </div>
 
-            <nav class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="#inicio" class="hover:text-brandNavy transition-colors text-brandNavy underline decoration-brandGold decoration-2 underline-offset-4">Início</a>
-                <a href="#como-funciona" class="hover:text-brandNavy transition-colors">Como Funciona</a>
-                <a href="#seo-info" class="hover:text-brandNavy transition-colors">A Empresa</a>
-                <button id="open-calc" class="bg-brandNavy text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition-all flex items-center gap-2">
-                    <i data-lucide="calculator" class="w-4 h-4 text-brandGold"></i> Calculadora
+            <nav class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#inicio" class="hover:text-brandNavy">Início</a>
+                <a href="#seo-info" class="hover:text-brandNavy">A Empresa</a>
+                <a href="#" class="text-blue-600 font-extrabold">Blog</a>
+                <button id="open-calc" class="bg-brandNavy text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                    <i data-lucide="calculator" class="w-3 h-3 text-brandGold"></i> Calculadora
                 </button>
             </nav>
 
-            <button class="md:hidden text-brandNavy" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
+            <button class="md:hidden p-2 text-brandNavy" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </header>
 
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col justify-center items-center gap-8 text-white p-6">
-        <button class="absolute top-8 right-8" id="close-menu"><i data-lucide="x" class="w-8 h-8"></i></button>
-        <a href="#inicio" class="text-3xl font-bold uppercase">Início</a>
-        <button id="open-calc-mobile" class="text-3xl font-bold text-brandGold uppercase">Calculadora</button>
-        <a href="#como-funciona" class="text-3xl font-bold uppercase">Processo</a>
-        <a href="#contato" class="text-3xl font-bold uppercase text-slate-400">Contato</a>
+        <button class="absolute top-6 right-6 p-2" id="close-menu"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <a href="#inicio" class="text-2xl font-bold uppercase">Início</a>
+        <button id="open-calc-mobile" class="text-2xl font-bold text-brandGold uppercase">Calculadora</button>
+        <a href="#processo" class="text-2xl font-bold uppercase text-slate-400">Como Funciona</a>
+        <a href="#contato" class="text-2xl font-bold uppercase text-slate-400">Contato</a>
     </div>
 
     <main>
         <!-- Hero Section Otimizada -->
-        <section id="inicio" class="py-16 lg:py-24 bg-white overflow-hidden border-b border-slate-50 text-center lg:text-left">
+        <section id="inicio" class="pt-12 pb-16 md:py-24 bg-white text-center lg:text-left">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-8">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full border border-slate-100">
-                            <span class="w-2 h-2 bg-brandGold rounded-full"></span>
-                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Representante Autorizado: Gleidson Nascimento</span>
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full border border-slate-100">
+                            <span class="w-2 h-2 bg-brandGold rounded-full animate-pulse"></span>
+                            <span class="text-[9px] font-bold uppercase tracking-widest text-slate-500 text-center">Especialista no Vale do Paraíba</span>
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-bold text-brandNavy leading-[1.1] tracking-tight uppercase">
-                            Energia Solar no Vale do Paraíba com Economia de até <span class="text-brandGold">95%.</span>
+                        <h1 class="text-4xl md:text-7xl font-extrabold text-brandNavy leading-tight tracking-tight uppercase">
+                            Energia Solar no Vale do Paraíba com economia de até <span class="text-brandGold">95%.</span>
                         </h1>
-                        <p class="text-xl text-slate-500 max-w-xl font-medium leading-relaxed italic">
-                            Instalação completa de painéis fotovoltaicos residenciais e comerciais. Reduza custos imediatamente com tecnologia de ponta.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-                            <button onclick="document.getElementById('open-calc').click()" class="bg-brandNavy text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl flex items-center justify-center gap-3">
-                                <i data-lucide="calculator" class="text-brandGold"></i> Calcular Economia
+                        <h2 class="text-base md:text-xl text-slate-500 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            Instalação de painéis fotovoltaicos residenciais e comerciais com suporte direto do representante Gleidson Nascimento.
+                        </h2>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button onclick="document.getElementById('open-calc').click()" class="bg-brandNavy text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl flex items-center justify-center gap-3">
+                                <i data-lucide="calculator" class="w-5 h-5 text-brandGold"></i> Simular Economia
                             </button>
-                            <a href="tel:12996368707" class="border-2 border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg text-brandNavy hover:bg-slate-50 transition-all flex items-center justify-center gap-3">
-                                <i data-lucide="phone"></i> Falar Agora
+                            <a href="tel:12996368707" class="border border-slate-200 px-8 py-4 rounded-xl font-bold text-base text-brandNavy hover:bg-slate-50 flex items-center justify-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5"></i> Ligar Agora
                             </a>
                         </div>
                     </div>
-                    <div class="relative hidden lg:block">
-                        <img src="https://images.unsplash.com/photo-1509391366360-feaffa648b8b?auto=format&fit=crop&q=80&w=1200" alt="Energia Solar Vale do Paraíba" class="rounded-[4rem] shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700">
-                        <div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl border border-slate-50">
-                            <p class="text-4xl font-bold text-brandNavy">25 anos</p>
-                            <p class="text-[10px] font-bold uppercase text-slate-400 tracking-widest mt-1">De Garantia de Performance</p>
-                        </div>
+                    <div class="relative hidden md:block">
+                        <img src="https://images.unsplash.com/photo-1509391366360-feaffa648b8b?auto=format&fit=crop&q=80&w=1200" alt="Placas Solares Vale do Paraíba" class="rounded-[3rem] shadow-xl hero-mask">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Garantias em Destaque -->
-        <section class="py-12 bg-slate-50 border-b border-slate-100">
+        <!-- Faixa de Garantias -->
+        <section class="py-8 bg-slate-50 border-y border-slate-100">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center py-6">
-                        <p class="text-4xl font-bold text-brandNavy mb-1">10 ANOS</p>
-                        <p class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">No Inversor Solar</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
+                    <div class="text-center md:border-r border-slate-200 last:border-0 py-4">
+                        <p class="text-3xl font-extrabold text-brandNavy mb-1 leading-none uppercase">10 ANOS</p>
+                        <p class="text-[9px] font-bold uppercase text-slate-400 tracking-widest leading-none">Garantia no Inversor</p>
                     </div>
-                    <div class="text-center py-6 md:border-x border-slate-200">
-                        <p class="text-4xl font-bold text-brandNavy mb-1">12 ANOS</p>
-                        <p class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Nos Módulos (Placas)</p>
+                    <div class="text-center md:border-r border-slate-200 last:border-0 py-4">
+                        <p class="text-3xl font-extrabold text-brandNavy mb-1 leading-none uppercase">25 ANOS</p>
+                        <p class="text-[9px] font-bold uppercase text-slate-400 tracking-widest leading-none">Performance das Placas</p>
                     </div>
-                    <div class="text-center py-6">
-                        <p class="text-4xl font-bold text-brandNavy mb-1">95%</p>
-                        <p class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Economia Máxima</p>
+                    <div class="text-center py-4">
+                        <p class="text-3xl font-extrabold text-brandNavy mb-1 leading-none uppercase">95%</p>
+                        <p class="text-[9px] font-bold uppercase text-slate-400 tracking-widest leading-none">Economia Máxima</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEO Semântico (O que faz o site ranquear) -->
-        <section id="seo-info" class="section-spacing bg-white">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-3xl font-bold text-brandNavy mb-8 text-center uppercase tracking-tight">
-                    Especialista em Energia Fotovoltaica no Vale do Paraíba
+        <!-- SEO Semântico (Conteúdo para Ranqueamento) -->
+        <section id="seo-info" class="py-16 md:py-24 bg-white border-b border-slate-50">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-brandNavy mb-6 uppercase tracking-tight leading-tight">
+                    Empresa de Energia Solar no Vale do Paraíba e Região
                 </h2>
-                <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-light text-center md:text-left">
+                <div class="space-y-6 text-sm md:text-lg text-slate-600 leading-relaxed">
                     <p>
-                        A <strong>Fonte Energia Solar</strong>, sob a gestão técnica de <strong>Gleidson Nascimento</strong>, oferece a solução definitiva para quem busca independência energética. Atendemos com excelência todo o <strong>Vale do Paraíba</strong>, entregando projetos que vão desde a consultoria inicial até a homologação final junto às concessionárias locais.
+                        A <strong>Fonte Energia Solar</strong> é especialista em instalação de sistemas fotovoltaicos em todo o Vale do Paraíba. Sob a consultoria autorizada de <strong>Gleidson Nascimento</strong>, entregamos projetos completos que garantem a redução da sua fatura em até 95%.
                     </p>
                     <p>
-                        Nosso foco é maximizar o retorno sobre o investimento (ROI). Através de equipamentos certificados e equipe de instalação altamente qualificada, garantimos que cada sistema solar projetado para sua residência ou empresa tenha a máxima eficiência, reduzindo gastos fixos e protegendo seu patrimônio contra a inflação energética.
+                        Nossa atuação abrange desde o estudo técnico inicial até a homologação final junto à concessionária, assegurando que seu imóvel receba o que há de mais moderno em tecnologia solar, valorizando seu patrimônio e gerando lucro imediato.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Como Funciona (Passo a Passo) -->
-        <section id="como-funciona" class="section-spacing bg-slate-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-brandNavy mb-16 uppercase tracking-tighter">O Processo de Instalação</h2>
-                <div class="grid md:grid-cols-4 gap-10">
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm text-brandGold font-bold text-xl">1</div>
-                        <h3 class="font-bold text-brandNavy uppercase text-sm tracking-widest">Análise Técnica</h3>
-                        <p class="text-xs text-slate-500 font-light">Estudo do telhado e consumo médio para dimensionar o sistema ideal.</p>
+        <!-- Processo Simplificado (HTML Corrigido) -->
+        <section id="processo" class="py-16 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-xl font-extrabold text-brandNavy mb-12 text-center uppercase tracking-widest opacity-40">O Caminho para a Economia</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center space-y-3 shadow-sm">
+                        <span class="text-xs font-black text-brandGold uppercase tracking-widest leading-none">01</span>
+                        <h3 class="font-bold text-brandNavy uppercase text-xs tracking-wider">Estudo Técnico</h3>
+                        <p class="text-[11px] text-slate-400 font-medium leading-relaxed">Análise gratuita do seu telhado e consumo médio mensal.</p>
                     </div>
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm text-brandGold font-bold text-xl">2</div>
-                        <h3 class="font-bold text-brandNavy uppercase text-sm tracking-widest">Projeto & Papéis</h3>
-                        <p class="text-xs text-slate-500 font-light">Cuidamos de toda a engenharia e aprovação na concessionária.</p>
+                    <!-- Item 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center space-y-3 shadow-sm">
+                        <span class="text-xs font-black text-brandGold uppercase tracking-widest leading-none">02</span>
+                        <h3 class="font-bold text-brandNavy uppercase text-xs tracking-wider">Engenharia</h3>
+                        <p class="text-[11px] text-slate-400 font-medium leading-relaxed">Desenvolvimento do projeto e homologação na concessionária.</p>
                     </div>
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm text-brandGold font-bold text-xl">3</div>
-                        <h3 class="font-bold text-brandNavy uppercase text-sm tracking-widest">Instalação</h3>
-                        <p class="text-xs text-slate-500 font-light">Equipe técnica especializada realiza a montagem das placas em tempo recorde.</p>
+                    <!-- Item 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center space-y-3 shadow-sm">
+                        <span class="text-xs font-black text-brandGold uppercase tracking-widest leading-none">03</span>
+                        <h3 class="font-bold text-brandNavy uppercase text-xs tracking-wider">Instalação</h3>
+                        <p class="text-[11px] text-slate-400 font-medium leading-relaxed">Montagem profissional com equipamentos de alta tecnologia.</p>
                     </div>
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 bg-brandGold rounded-2xl flex items-center justify-center mx-auto shadow-sm text-brandNavy font-bold text-xl"><i data-lucide="zap" class="fill-current"></i></div>
-                        <h3 class="font-bold text-brandNavy uppercase text-sm tracking-widest">Ativação</h3>
-                        <p class="text-xs text-slate-500 font-light">Conexão à rede e início imediato da sua economia mensal.</p>
+                    <!-- Item 4 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center space-y-3 shadow-sm">
+                        <span class="text-xs font-black text-brandGold uppercase tracking-widest leading-none">04</span>
+                        <h3 class="font-bold text-brandNavy uppercase text-xs tracking-wider">Ativação</h3>
+                        <p class="text-[11px] text-slate-400 font-medium leading-relaxed">Sistema ligado à rede e início imediato da sua economia.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Grid de Vantagens (Visual Premium) -->
-        <section class="section-spacing bg-white">
+        <!-- Bento Grid Otimizada -->
+        <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="md:col-span-2 bg-brandNavy rounded-[3rem] p-12 text-white relative overflow-hidden flex flex-col justify-end min-h-[400px]">
-                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Sustentabilidade">
+                    <div class="md:col-span-2 bg-brandNavy rounded-3xl p-8 md:p-12 text-white relative overflow-hidden flex flex-col justify-end min-h-[320px]">
                         <div class="relative z-10 space-y-4">
-                            <h3 class="text-4xl font-bold uppercase tracking-tight">Valorização do Patrimônio</h3>
-                            <p class="text-slate-300 max-w-md font-light leading-relaxed">Imóveis equipados com energia solar valorizam imediatamente entre 10% a 20% no mercado imobiliário do Vale do Paraíba.</p>
+                            <h3 class="text-3xl font-extrabold uppercase tracking-tight">Valorização Patrimonial</h3>
+                            <p class="text-slate-300 text-sm md:text-base font-light max-w-md">Estudos comprovam que imóveis com energia solar valorizam até 20% no Vale do Paraíba.</p>
                         </div>
                     </div>
-                    <div class="bg-brandGold rounded-[3rem] p-10 flex flex-col justify-between text-brandNavy">
-                        <i data-lucide="trending-down" class="w-12 h-12"></i>
-                        <div class="space-y-2">
-                            <h3 class="text-2xl font-bold uppercase leading-none">Parcela Fixa</h3>
-                            <p class="text-sm font-medium italic opacity-80">Troque o custo da conta de luz que só sobe por uma parcela fixa de investimento que acaba.</p>
+                    <div class="bg-brandGold rounded-3xl p-8 flex flex-col justify-between text-brandNavy shadow-lg">
+                        <i data-lucide="trending-down" class="w-10 h-10 mb-6"></i>
+                        <div>
+                            <h3 class="text-xl font-black uppercase leading-tight">Parcelas<br>Fixas</h3>
+                            <p class="text-[10px] font-bold mt-2 opacity-70 uppercase tracking-widest">Troque o custo mensal por um investimento duradouro.</p>
                         </div>
-                    </div>
-                    <div class="p-10 rounded-[3rem] border border-slate-100 bg-slate-50 flex flex-col justify-between">
-                        <i data-lucide="shield-check" class="w-12 h-12 text-blue-600"></i>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-brandNavy uppercase tracking-widest">Suporte Local</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed font-light">Atendimento presencial e rápido em qualquer cidade do Vale do Paraíba diretamente com o Gleidson.</p>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 p-12 bg-white border border-slate-100 rounded-[3rem] flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
-                        <div class="space-y-4">
-                            <h3 class="text-3xl font-bold text-brandNavy uppercase tracking-tighter leading-none">Investimento de Baixo Risco</h3>
-                            <p class="text-slate-500 font-light leading-relaxed">O sistema se paga em média em 4 anos, garantindo lucro líquido pelos próximos 21 anos de vida útil do equipamento.</p>
-                        </div>
-                        <div class="w-32 h-32 bg-slate-100 rounded-full flex items-center justify-center shrink-0"><i data-lucide="coins" class="w-12 h-12 text-brandNavy"></i></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof (Simples & Sério) -->
-        <section class="section-spacing bg-slate-50">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-2xl font-bold text-brandNavy mb-16 uppercase tracking-widest opacity-60">Resultados Reais no Vale</h3>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="p-10 rounded-3xl bg-white shadow-sm border border-slate-100 text-left space-y-6">
-                        <div class="flex text-brandGold"><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i></div>
-                        <p class="text-slate-600 text-lg font-light leading-relaxed italic">“Minha conta de R$ 780 caiu para R$ 89 logo no primeiro mês após a ativação. O trabalho do Gleidson é muito profissional e transparente.”</p>
-                        <p class="font-bold text-brandNavy text-xs uppercase tracking-widest">— Residência em Urbanova</p>
-                    </div>
-                    <div class="p-10 rounded-3xl bg-white shadow-sm border border-slate-100 text-left space-y-6">
-                        <div class="flex text-brandGold"><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i></div>
-                        <p class="text-slate-600 text-lg font-light leading-relaxed italic">“Energia solar foi o melhor investimento que fizemos no nosso comércio. Segurança contra aumentos tarifários e valorização real.”</p>
-                        <p class="font-bold text-brandNavy text-xs uppercase tracking-widest">— Comércio em Jacareí</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ (Objeções e SEO) -->
-        <section id="faq" class="section-spacing bg-white">
-            <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="text-3xl font-bold text-brandNavy text-center mb-16 uppercase tracking-tight underline decoration-brandGold decoration-4 underline-offset-8">Dúvidas Frequentes</h2>
-                <div class="space-y-6 font-sans">
-                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer open:ring-1 open:ring-slate-200">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center group-hover:text-brandGold transition-colors uppercase text-sm tracking-wider leading-none">
-                            O sistema precisa de muita manutenção?
-                            <i data-lucide="plus" class="w-5 h-5 transition-transform group-open:rotate-45"></i>
-                        </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-light">A manutenção é mínima, consistindo basicamente na limpeza periódica das placas para garantir a máxima captação da radiação solar. A garantia de eficiência é de até 25 anos.</p>
-                    </details>
-                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer open:ring-1 open:ring-slate-200">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center group-hover:text-brandGold transition-colors uppercase text-sm tracking-wider leading-none">
-                            Funciona em dias nublados ou chuvosos?
-                            <i data-lucide="plus" class="w-5 h-5 transition-transform group-open:rotate-45"></i>
-                        </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-light">Sim! Embora a produção diminua proporcionalmente à falta de luz solar direta, os sistemas modernos continuam gerando energia através da radiação difusa, garantindo economia constante.</p>
-                    </details>
-                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer open:ring-1 open:ring-slate-200">
-                        <summary class="font-bold text-brandNavy list-none flex justify-between items-center group-hover:text-brandGold transition-colors uppercase text-sm tracking-wider leading-none">
-                            Quanto tempo dura o sistema?
-                            <i data-lucide="plus" class="w-5 h-5 transition-transform group-open:rotate-45"></i>
-                        </summary>
-                        <p class="mt-4 text-slate-500 text-sm leading-relaxed font-light">A vida útil estimada de um sistema de energia solar bem projetado é superior a 25 anos, mantendo pelo menos 80% da sua capacidade produtiva original durante todo esse período.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato Final -->
-        <section id="contato" class="py-24 bg-brandNavy text-white">
+        <!-- Contato Focado em Conversão -->
+        <section id="contato" class="py-16 md:py-24 bg-brandNavy text-white">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="space-y-10 text-center md:text-left">
-                        <h2 class="text-5xl font-bold tracking-tight leading-none uppercase">Pronto para <br><span class="text-brandGold italic">zerar sua conta?</span></h2>
+                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-none uppercase leading-[1.1]">Pronto para <br><span class="text-brandGold italic">zerar sua conta?</span></h2>
                         
-                        <div class="space-y-8">
-                            <div class="flex items-center gap-6 justify-center md:justify-start">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brandGold shadow-sm"><i data-lucide="user"></i></div>
-                                <div>
-                                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Representante Autorizado</p>
-                                    <p class="font-bold uppercase tracking-tighter">Gleidson Nascimento</p>
+                        <div class="grid gap-6">
+                            <div class="flex items-center gap-5 justify-center md:justify-start">
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brandGold shadow-inner"><i data-lucide="user" class="w-5 h-5"></i></div>
+                                <div class="text-left leading-tight">
+                                    <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest mb-1 leading-none">Representante Autorizado</p>
+                                    <p class="font-bold text-sm uppercase leading-none">Gleidson Nascimento</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-6 justify-center md:justify-start">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brandGold shadow-sm"><i data-lucide="map-pin"></i></div>
-                                <div>
-                                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Endereço do Representante</p>
-                                    <p class="font-medium text-sm text-slate-200">R. Francisco João Leme, 83 - Vila Sinha<br>SJC - SP</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-6 justify-center md:justify-start">
-                                <div class="w-12 h-12 bg-brandGold text-brandNavy rounded-xl flex items-center justify-center shadow-lg animate-bounce"><i data-lucide="phone"></i></div>
-                                <div>
-                                    <p class="text-[10px] text-brandGold font-bold uppercase tracking-widest leading-none mb-1">WhatsApp Direto</p>
-                                    <p class="text-2xl font-bold text-white tracking-tighter">(12) 99636-8707</p>
+                            <div class="flex items-center gap-5 justify-center md:justify-start">
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brandGold shadow-inner"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                                <div class="text-left leading-tight">
+                                    <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest mb-1 leading-none">Endereço do Representante</p>
+                                    <p class="font-medium text-[11px] uppercase tracking-tighter opacity-80 leading-none">R. Francisco João Leme, 83 - Vila Sinha, SJC</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-[3.5rem] p-12 shadow-2xl border border-slate-100 text-slate-900">
-                        <h3 class="text-2xl font-bold text-brandNavy mb-8 uppercase tracking-tight">Solicite seu estudo</h3>
+                    <div class="bg-white rounded-[2rem] p-8 shadow-2xl text-slate-900">
+                        <h3 class="text-xl font-bold text-brandNavy mb-6 text-center uppercase tracking-tight leading-none">Solicitar Orçamento</h3>
                         <form class="space-y-4" onsubmit="enviarWhatsGeral(event)">
-                            <input id="nome-geral" type="text" placeholder="Seu Nome" class="w-full px-6 py-5 bg-slate-50 rounded-2xl border-none outline-none focus:ring-2 focus:ring-brandGold transition-all font-medium" required>
-                            <input id="valor-geral" type="number" placeholder="Valor médio da fatura de luz" class="w-full px-6 py-5 bg-slate-50 rounded-2xl border-none outline-none focus:ring-2 focus:ring-brandGold transition-all font-medium" required>
-                            <button class="w-full bg-brandNavy text-white font-bold py-6 rounded-2xl hover:bg-slate-800 transition-all shadow-lg text-lg uppercase tracking-widest mt-4">
-                                Enviar para o Especialista
+                            <input id="nome-geral" type="text" placeholder="Nome Completo" class="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-100 outline-none focus:ring-1 focus:ring-brandGold font-medium text-sm" required>
+                            <input id="valor-geral" type="number" placeholder="Sua conta mensal (R$)" class="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-100 outline-none focus:ring-1 focus:ring-brandGold font-medium text-sm" required>
+                            <button class="w-full bg-brandNavy text-white font-bold py-5 rounded-xl active:scale-95 transition-all text-sm uppercase tracking-widest shadow-lg">
+                                Enviar pelo WhatsApp
                             </button>
-                            <p class="text-[10px] text-center text-slate-400 uppercase mt-6 tracking-widest font-bold font-sans">Retorno em minutos pelo Gleidson</p>
                         </form>
                     </div>
                 </div>
@@ -370,10 +297,10 @@
         </section>
     </main>
 
-    <footer class="py-12 bg-white border-t border-slate-100 text-center font-sans">
+    <footer class="py-10 bg-white text-center border-t border-slate-100">
         <div class="container mx-auto px-6">
-            <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 mb-2 leading-none">Fonte Energia Solar</p>
-            <p class="text-[8px] text-slate-400 uppercase tracking-widest leading-none">Vale do Paraíba & Região — Desenvolvido por Rafael para Gleidson Nascimento © 2026</p>
+            <p class="text-[9px] font-black uppercase tracking-[0.4em] text-slate-300 mb-2 leading-none">Fonte Energia Solar Vale</p>
+            <p class="text-[8px] text-slate-300 uppercase tracking-widest">Developed by Rafael for Gleidson Nascimento © 2026</p>
         </div>
     </footer>
 
@@ -393,20 +320,21 @@
             modal.classList.toggle('hidden', !show);
             modal.classList.toggle('flex', show);
             document.body.style.overflow = show ? 'hidden' : 'auto';
+            if(show) inputConta.focus();
         };
 
         if(openBtn) openBtn.onclick = () => toggleModal(true);
-        if(openBtnMobile) openBtnMobile.onclick = () => toggleModal(true);
+        if(openBtnMobile) openBtnMobile.onclick = () => { toggleNav(false); toggleModal(true); };
         if(closeBtn) closeBtn.onclick = () => toggleModal(false);
         modal.onclick = (e) => { if(e.target === modal) toggleModal(false); };
 
-        // Calculadora Interativa (95% economia)
+        // Lógica da Calculadora (95% economia)
         inputConta.addEventListener('input', (e) => {
             let val = parseFloat(e.target.value);
             if(val > 0) {
                 boxResultado.classList.remove('hidden');
                 let economia = val * 0.95;
-                displayResultado.innerText = `R$ ${economia.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                displayResultado.innerText = `R$ ${economia.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             } else {
                 boxResultado.classList.add('hidden');
             }
@@ -416,8 +344,8 @@
             e.preventDefault();
             let nome = document.getElementById("lead-nome").value;
             let conta = inputConta.value;
-            if(!nome || !conta) return alert("Por favor, preencha nome e valor.");
-            let msg = `Olá Gleidson! Sou ${nome} e vi no site que posso economizar R$ ${(conta*0.95).toFixed(2)} na minha conta de R$ ${conta}. Gostaria da proposta.`;
+            if(!nome || !conta) return;
+            let msg = `Olá Gleidson! Sou ${nome} e vi no site que posso economizar R$ ${(conta*0.95).toFixed(2)} para minha conta de R$ ${conta}.`;
             window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
         }
 
@@ -425,8 +353,8 @@
             e.preventDefault();
             let nome = document.getElementById("nome-geral").value;
             let valor = document.getElementById("valor-geral").value;
-            if(!nome || !valor) return alert("Por favor, preencha nome e valor.");
-            let msg = `Olá Gleidson! Sou ${nome} e minha conta média é de R$ ${valor}. Gostaria de solicitar um estudo de energia solar para minha residência/empresa.`;
+            if(!nome || !valor) return;
+            let msg = `Olá Gleidson! Sou ${nome} e minha conta média é de R$ ${valor}. Gostaria de solicitar um estudo de energia solar para o Vale do Paraíba.`;
             window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
         }
 
@@ -434,8 +362,14 @@
         const menuBtn = document.getElementById('mobile-menu-btn');
         const closeNav = document.getElementById('close-menu');
         const mobileNav = document.getElementById('mobile-nav');
-        if(menuBtn) menuBtn.onclick = () => { mobileNav.classList.remove('hidden'); mobileNav.classList.add('flex'); };
-        if(closeNav) closeNav.onclick = () => { mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex'); };
+        
+        const toggleNav = (show) => {
+            mobileNav.classList.toggle('hidden', !show);
+            mobileNav.classList.toggle('flex', show);
+        };
+
+        if(menuBtn) menuBtn.onclick = () => toggleNav(true);
+        if(closeNav) closeNav.onclick = () => toggleNav(false);
     </script>
 </body>
 </html>
