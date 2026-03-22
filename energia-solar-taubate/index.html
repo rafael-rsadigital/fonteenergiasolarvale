@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO ESTRATÉGICO LOCAL - TAUBATÉ -->
+    <title>Energia Solar em Taubaté | Economia de até 90% | Fonte Energia Solar</title>
+    <meta name="description" content="Instalação de energia solar em Taubaté com economia de até 90%. Reduza gastos com ar-condicionado. Projetos completos com homologação técnica na região.">
+    <link rel="canonical" href="https://fonteenergiasolar.com.br/energia-solar-taubate/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Energia Solar em Taubaté | Fonte Energia Solar">
+    <meta property="og:description" content="Reduza sua conta de luz em até 90% em Taubaté mesmo com uso intenso de ar-condicionado. Atendimento em toda a cidade.">
+    <meta property="og:image" content="../img/energia-solar-taubate.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Schema Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fonte Energia Solar - Taubaté",
+      "image": "../img/logotipo-fonte-energia-solar-vale.png",
+      "telephone": "+5512996368707",
+      "url": "https://fonteenergiasolar.com.br/energia-solar-taubate/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Francisco João Leme, 83 - Vila Sinha",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Taubaté"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandNavy: '#07294f',
+                        brandGold: '#fdcd06',
+                        brandText: '#0f172a',
+                        whatsapp: '#25D366',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'ticker': 'ticker 8s linear infinite' },
+                    keyframes: { ticker: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; font-size: 14px; color: #0f172a; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .hero-overlay { background: linear-gradient(to right, rgba(7, 41, 79, 0.96) 20%, rgba(7, 41, 79, 0.4) 100%); }
+        .ticker-container { white-space: nowrap; overflow: hidden; }
+        .ticker-content { display: inline-block; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body class="bg-white text-brandText antialiased overflow-x-hidden">
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Vi%20a%20página%20de%20Taubaté%20e%20gostaria%20de%20um%20estudo%20personalizado." 
+       target="_blank" aria-label="Falar no WhatsApp"
+       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 drop-shadow-xl">
+        <img src="../img/whatsapp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'">
+    </a>
+
+    <!-- Modal Calculadora -->
+    <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
+        <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8 relative">
+            <button id="close-modal" class="absolute top-5 right-5 text-slate-500 hover:text-brandNavy transition-colors" aria-label="Fechar"><i data-lucide="x" class="w-6 h-6"></i></button>
+            <div class="text-center mb-8 leading-none">
+                <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Calculadora de Economia</h3>
+                <p class="text-slate-900 text-[10px] mt-2 uppercase tracking-widest font-bold text-brandGold leading-none">Cálculo de 90% para Taubaté</p>
+            </div>
+            <div class="space-y-4 font-sans text-center">
+                <input id="modal-nome" type="text" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-center font-bold text-sm text-brandText uppercase tracking-tighter shadow-inner">
+                <input id="modal-cidade" type="text" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-center font-bold text-sm text-brandText uppercase tracking-tighter shadow-inner">
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-brandText tracking-widest block mb-2 text-center leading-none">Fatura média mensal</label>
+                    <div class="relative">
+                        <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-bold">R$</span>
+                        <input type="number" id="input-conta-modal" placeholder="0,00" class="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 text-center text-sm font-bold text-brandNavy outline-none focus:ring-2 focus:ring-brandGold">
+                    </div>
+                </div>
+                <div id="box-result-modal" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center border border-white/5">
+                    <p class="text-[9px] uppercase font-bold opacity-70 mb-1 leading-none">Poupança em Taubaté</p>
+                    <p id="display-result-modal" class="text-2xl font-black text-brandGold">R$ 0,00</p>
+                </div>
+                <button onclick="enviarWhatsModal(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl shadow-md uppercase text-[10px] tracking-widest">
+                    Receber Estudo em Taubaté
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Sincronizado -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40 leading-none">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center leading-none">
+            <a href="https://fonteenergiasolarvale.com.br">
+                <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Fonte Energia Solar Logo" class="h-9 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-[9px] font-black tracking-widest text-brandNavy font-sans uppercase leading-none">
+                <a href="../" class="hover:text-blue-600 transition-colors font-black">Home</a>
+                <a href="../sobre/" class="hover:text-blue-600 transition-colors font-black">Sobre</a>
+                <div class="relative group cursor-default leading-none">
+                    <span class="hover:text-blue-600 transition-colors flex items-center gap-1 uppercase font-black">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
+                    <div class="absolute top-full left-0 hidden group-hover:block pt-2 min-w-[260px] animate-in fade-in zoom-in-95 leading-none z-50">
+                        <div class="bg-white shadow-2xl rounded-xl border border-slate-100 p-4">
+                            <ul class="space-y-2 text-brandNavy font-black text-[9px] uppercase tracking-wider leading-none">
+                                <li><a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-jacarei/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Jacareí <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-taubate/" class="text-blue-700 border-b border-brandGold/30 pb-2 flex justify-between items-center font-black tracking-tighter">Taubaté <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
+                                <li><a href="../energia-solar-cacapava/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Caçapava <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-pindamonhangaba/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Pindamonhangaba <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-guaratingueta/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Guaratinguetá <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-lorena/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between uppercase">Lorena <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li class="pt-3 border-t border-slate-100">
+                                    <a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região%20do%20Vale." target="_blank" class="text-brandGold font-black flex items-center gap-2 border border-brandGold/20 p-2 rounded-lg hover:bg-brandGold hover:text-brandNavy transition-all uppercase tracking-tighter">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog/" class="text-blue-600 font-black leading-none uppercase">Blog</a>
+                <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex');" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] font-bold tracking-widest uppercase shadow-sm">Calculadora de Economia</button>
+            </nav>
+            <button class="lg:hidden text-brandNavy font-sans leading-none" id="mobile-menu-btn" aria-label="Abrir menu"><i data-lucide="menu" class="w-6 h-6 leading-none"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Sincronizado -->
+    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col p-8 text-white overflow-y-auto transition-all font-sans leading-none text-center">
+        <div class="flex justify-between items-center mb-10 leading-none">
+            <span class="font-bold text-[10px] uppercase tracking-[0.3em] opacity-40">Menu Taubaté</span>
+            <button id="close-menu" aria-label="Fechar menu"><i data-lucide="x" class="w-7 h-7 text-white"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-[12px] font-bold uppercase tracking-widest mb-10">
+            <a href="../">Home</a>
+            <a href="../sobre/">Sobre</a>
+            <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex'); document.getElementById('mobile-nav').classList.add('hidden');" class="text-center uppercase font-bold">Calculadora Taubaté</button>
+            <a href="../blog/" class="text-blue-400 font-extrabold uppercase">Blog Técnico</a>
+        </div>
+        <div class="pt-8 border-t border-white/10 font-sans">
+            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black">Cidades Atendidas</p>
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-400 font-sans leading-none">
+                <li><a href="../energia-solar-sao-jose-dos-campos/">São José dos Campos</a></li>
+                <li><a href="../energia-solar-jacarei/">Jacareí</a></li>
+                <li><a href="../energia-solar-taubate/" class="text-brandGold">Taubaté <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
+                <li class="pt-4 border-t border-white/5"><a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região." target="_blank" class="text-brandGold font-black flex justify-between items-center uppercase text-[9px]">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO TAUBATÉ INTEGRADO -->
+        <section class="relative min-h-[550px] md:min-h-[620px] flex items-center bg-brandNavy overflow-hidden reveal font-sans">
+            <div class="absolute inset-0 z-0">
+                <img src="../img/painel-solar-hero-background.webp" alt="Instalação de energia solar em Taubaté SP" class="w-full h-full object-cover opacity-50" loading="eager">
+                <div class="absolute inset-0 hero-overlay leading-none"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 font-sans">
+                <div class="grid lg:grid-cols-2 gap-12 items-center text-center md:text-left">
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans mx-auto md:mx-0">
+                            <span class="w-1.5 h-1.5 bg-brandGold rounded-full animate-pulse leading-none"></span>
+                            <span class="text-[8px] font-black uppercase tracking-widest text-white leading-none">Especialista Regional: Gleidson Nascimento</span>
+                        </div>
+                        <h1 class="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider leading-relaxed font-sans text-white">
+                            Energia Solar em Taubaté <br><span class="text-brandGold font-black">90% de economia na sua conta</span>
+                        </h1>
+                        <p class="text-sm md:text-lg opacity-95 font-bold text-white leading-relaxed normal-case">
+                            Reduza sua conta de luz em Taubaté mesmo com uso intenso de ar-condicionado. Atendimento completo em toda a cidade com homologação rápida.
+                        </p>
+                    </div>
+
+                    <!-- Calculadora Integrada no Hero (Taubaté) -->
+                    <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal mx-auto w-full max-w-md">
+                        <div class="text-center mb-6 leading-none">
+                            <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Simule em Taubaté</h3>
+                            <p class="text-slate-600 text-[9px] mt-2 uppercase tracking-widest font-black leading-none">Estudo técnico gratuito</p>
+                        </div>
+                        <div class="space-y-4 font-sans text-center">
+                            <input type="text" id="lead-nome-hero" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
+                            <input type="text" id="lead-cidade-hero" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
+                            <div class="relative">
+                                <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-black text-sm leading-none font-black">R$</span>
+                                <input type="number" id="input-hero-conta" placeholder="Valor da conta mensal" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandNavy text-center transition-all uppercase tracking-tighter font-black">
+                            </div>
+                            <div id="hero-result-box" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center animate-in fade-in slide-in-from-top-2 border border-white/5">
+                                <p class="text-[9px] uppercase font-bold opacity-60 mb-1 leading-none font-sans font-black">Poupança em Taubaté:</p>
+                                <p id="hero-display-result" class="text-2xl font-black text-brandGold tracking-tight font-sans">R$ 0,00</p>
+                            </div>
+                            <button onclick="enviarWhatsLeadHero(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl active:scale-95 transition-all text-[10px] uppercase tracking-widest shadow-md font-sans font-black">
+                                Garantir Economia em Taubaté
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKER TAUBATÉ -->
+        <div class="bg-brandGold py-3 border-y border-yellow-500 overflow-hidden relative z-20 font-sans leading-none uppercase">
+            <div class="ticker-container">
+                <div class="ticker-content animate-ticker flex items-center gap-8 text-[9px] font-black uppercase tracking-[0.2em] text-brandNavy leading-none">
+                    <span>Economia real mesmo com calor intenso •</span>
+                    <span>Ideal para casas e comércios em Taubaté •</span>
+                    <span>Reduza custos com ar-condicionado •</span>
+                    <span>Energia solar com alto desempenho na região •</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTEÚDO ESTRATÉGICO TAUBATÉ -->
+        <section class="py-16 md:py-28 bg-white reveal leading-relaxed font-sans text-brandText">
+            <div class="container mx-auto px-6 max-w-6xl text-center md:text-left font-sans leading-relaxed">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase tracking-tighter leading-tight font-sans">
+                            Energia Solar em Taubaté com Máxima Economia
+                        </h2>
+                        <div class="space-y-4 text-brandText text-sm md:text-base leading-relaxed font-bold font-sans uppercase tracking-tight">
+                            <p>Em Taubaté, o consumo de energia elétrica tende a ser elevado devido ao clima quente e ao uso frequente de ar-condicionado e equipamentos elétricos. A <strong>Fonte Energia Solar</strong>, liderada por <strong>Gleidson Nascimento</strong>, oferece soluções completas para reduzir drasticamente sua conta de luz.</p>
+                            <p>Atendemos com agilidade toda a cidade, incluindo bairros como:</p>
+                            <ul class="space-y-2 border-l-4 border-brandGold pl-4 font-black uppercase text-[11px] tracking-widest font-sans">
+                                <li>Independência e Jardim das Nações</li>
+                                <li>Centro e Estiva</li>
+                                <li>Quiririm e região rural</li>
+                                <li>Jardim Mourisco e Gurilândia</li>
+                                <li>Bonfim e Parque São Luís</li>
+                            </ul>
+                            <p>Com energia solar, você transforma o alto consumo em economia de até 90% ao mês, com retorno rápido e valorização do imóvel.</p>
+                            <p class="pt-4 text-[10px] font-black uppercase tracking-widest text-brandNavy leading-relaxed">
+                                Atendemos também cidades próximas como <a href="../energia-solar-sao-jose-dos-campos/" class="text-blue-600 underline decoration-brandGold">São José dos Campos</a> e <a href="../energia-solar-jacarei/" class="text-blue-600 underline decoration-brandGold">Jacareí</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="../img/painel-solar-residencial-sjc.webp" alt="Instalação de energia solar em Taubaté SP" class="rounded-[2.5rem] shadow-2xl grayscale-[10%] hover:grayscale-0 transition-all duration-700 aspect-square object-cover" onerror="this.src='../img/painel-solar-hero-background.webp'">
+                        <div class="absolute -bottom-6 -right-6 bg-brandGold p-6 rounded-2xl shadow-xl hidden md:block">
+                            <p class="text-brandNavy font-black uppercase text-[10px] leading-none font-sans text-center">90% DE ECONOMIA<br><span class="text-[9px] opacity-70 uppercase font-black">ESTUDOS EM TAUBATÉ</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: POR QUE ESCOLHER TAUBATÉ -->
+        <section class="py-20 md:py-32 bg-slate-50 reveal font-sans">
+            <div class="container mx-auto px-6 max-w-5xl text-center">
+                <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase mb-16 font-sans">Empresa de Energia Solar em Taubaté</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                        <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="zap"></i></div>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Redução Imediata</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Comece a economizar assim que o sistema for ativado, livrando-se das altas tarifas de energia da região.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                        <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="shield-check"></i></div>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Projeto Sob Medida</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Projetos personalizados para residências e empresas de Taubaté, dimensionados para o seu consumo real.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                        <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="award"></i></div>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Garantia Técnica</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Equipamentos de longa vida útil com garantia e homologação garantida junto à concessionária local.</p>
+                    </div>
+                </div>
+                <div class="mt-16 max-w-2xl mx-auto">
+                    <p class="text-sm font-black text-brandNavy leading-relaxed uppercase tracking-tight">
+                        Se sua conta de energia em Taubaté vem aumentando mês após mês, a energia solar é hoje a forma mais segura de travar esse custo e proteger seu patrimônio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ COMPLETO (8 ITENS) -->
+        <section id="faq" class="py-20 md:py-32 bg-white border-y border-slate-200 reveal font-sans">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h3 class="text-[10px] font-black text-brandNavy text-center mb-12 uppercase tracking-[0.5em] opacity-50 leading-none uppercase font-black">Perguntas Frequentes</h3>
+                <div class="space-y-4 font-sans uppercase font-black">
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer open:ring-1 open:ring-brandGold transition-all border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            1. Quanto posso economizar com energia solar?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">A economia pode chegar a até 90% na conta de energia, dependendo do consumo e do dimensionamento do sistema. Cada projeto é personalizado para maximizar o retorno financeiro.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none font-sans">
+                            2. Energia solar funciona em dias nublados ou chuvosos?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Mesmo com baixa incidência solar direta, os painéis continuam gerando energia através da radiação difusa, garantindo produção constante durante o ano todo.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            3. Quanto custa instalar energia solar?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">O valor varia conforme o consumo mensal do imóvel e o tamanho do sistema necessário. Realizamos uma análise personalizada para apresentar o orçamento mais vantajoso para você.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            4. Em quanto tempo o investimento retorna?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Em média, o sistema se paga entre 4 a 5 anos através da própria economia gerada na fatura, oferecendo lucro direto por mais de 20 anos após esse período.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            5. Preciso de manutenção no sistema?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">A manutenção é mínima. Normalmente envolve apenas a limpeza periódica dos painéis solares e o acompanhamento remoto do desempenho através do aplicativo oficial.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            6. A instalação é regulamentada?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Todo o sistema segue rigorosamente as normas da ANEEL e passa por um processo de homologação técnica completa junto à concessionária de energia local.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            7. Atendem minha cidade?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Atendemos todo o Vale do Paraíba, incluindo Taubaté, São José dos Campos, Jacareí, Caçapava, Pindamonhangaba, Guaratinguetá e Lorena.</p>
+                    </details>
+                    <details class="group bg-white rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm font-sans">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            8. Posso financiar o sistema?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Existem excelentes opções de financiamento bancário onde a parcela mensal pode ser próxima ou até menor que o valor da sua economia na conta atual.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ REFACTORADO (RSA Digital - Sincronizado e sem itálicos) -->
+    <footer id="footer-main" class="bg-white pt-24 pb-0 font-sans border-t border-slate-100 reveal relative overflow-hidden text-brandText font-black uppercase shadow-inner leading-none uppercase">
+        <div class="container mx-auto px-6 mb-16 leading-none font-sans uppercase">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left items-start leading-none">
+                
+                <div class="space-y-6 text-center md:text-left leading-none font-sans">
+                    <a href="https://fonteenergiasolarvale.com.br">
+                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans">
+                    </a>
+                    <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest leading-relaxed font-sans font-black">
+                        Referência em projetos fotovoltaicos no Vale do Paraíba. Reduza a sua fatura mensal com tecnologia de ponta.
+                    </p>
+                </div>
+
+                <div class="space-y-6 leading-none font-sans">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black">Institucional</h4>
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans font-black">
+                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Home</a></li>
+                        <li><a href="../sobre/" class="hover:text-brandGold transition-colors font-sans">Sobre Nós</a></li>
+                        <li><a href="../blog/" class="hover:text-brandGold transition-colors font-black font-sans font-black">Blog Técnico</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 lg:col-span-2 leading-none font-sans">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black">Cidades Atendidas</h4>
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-[9px] font-black uppercase tracking-widest font-sans font-black font-black">
+                        <a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-brandGold transition-all font-black">São José dos Campos</a>
+                        <a href="../energia-solar-jacarei/" class="hover:text-brandGold transition-all font-black">Jacareí</a>
+                        <a href="../energia-solar-taubate/" class="text-blue-700 font-black">Taubaté</a>
+                        <a href="../energia-solar-cacapava/" class="hover:text-brandGold transition-all font-black">Caçapava</a>
+                        <a href="../energia-solar-pindamonhangaba/" class="hover:text-brandGold transition-all font-black">Pindamonhangaba</a>
+                        <a href="../energia-solar-guaratingueta/" class="hover:text-brandGold transition-all font-black">Guaratinguetá</a>
+                        <a href="../energia-solar-lorena/" class="hover:text-brandGold transition-all font-black">Lorena</a>
+                        <a href="https://wa.me/5512996368707?text=Consultar%20outra%20região%20do%20Vale." target="_blank" class="text-brandGold font-black hover:underline uppercase tracking-tighter leading-none font-sans font-black">Outras cidades sob consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra Inferior RSA Digital (Centralizada) -->
+        <div class="bg-slate-900 py-10 border-t border-white/5 pb-20 md:pb-16 px-6 text-center">
+            <div class="container mx-auto flex flex-col items-center justify-center gap-6 leading-none font-sans font-black">
+                <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] text-center leading-none font-sans">
+                    Fonte Energia Solar Vale - © 2026 - Gleidson Nascimento
+                </p>
+                <div class="text-[11px] text-slate-400 font-bold font-sans text-center uppercase leading-none tracking-wider font-sans font-black">
+                    Desenvolvido por 
+                    <a href="https://wa.me/5512988052097?text=Olá%20Rafael!%20Vi%20o%20site%20da%20Fonte%20Energia%20Solar%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20RSA%20Digital." 
+                       target="_blank" 
+                       class="text-brandGold font-black hover:underline transition-all font-sans tracking-widest font-black">RSA Digital</a> 
+                    | SOLUÇÕES DIGITAIS E GOOGLE MEU NEGÓCIO
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const modal = document.getElementById('modal-calc');
+        const openBtn = document.getElementById('open-calc');
+        const closeBtn = document.getElementById('close-modal');
+        const inputContaModal = document.getElementById('input-conta-modal');
+        const boxResultModal = document.getElementById('box-result-modal');
+        const displayResultModal = document.getElementById('display-result-modal');
+
+        const toggleModal = (show) => {
+            modal.classList.toggle('hidden', !show);
+            modal.classList.toggle('flex', show);
+            document.body.style.overflow = show ? 'hidden' : 'auto';
+            if(show) setTimeout(() => document.getElementById('input-conta-modal').focus(), 250);
+        };
+
+        if(openBtn) openBtn.onclick = () => toggleModal(true);
+        if(closeBtn) closeBtn.onclick = () => toggleModal(false);
+        modal.onclick = (e) => { if(e.target === modal) toggleModal(false); };
+
+        const inputHeroConta = document.getElementById('input-hero-conta');
+        const heroResultBox = document.getElementById('hero-result-box');
+        const heroDisplayResult = document.getElementById('hero-display-result');
+
+        inputHeroConta.addEventListener('input', (e) => {
+            let val = parseFloat(e.target.value);
+            if(val > 0) {
+                heroResultBox.classList.remove('hidden');
+                let economy = val * 0.90;
+                heroDisplayResult.innerText = `R$ ${economia.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            } else { heroResultBox.classList.add('hidden'); }
+        });
+
+        if(inputContaModal) {
+            inputContaModal.addEventListener('input', (e) => {
+                let val = parseFloat(e.target.value);
+                if(val > 0) {
+                    boxResultModal.classList.remove('hidden');
+                    let economia = val * 0.90;
+                    displayResultModal.innerText = `R$ ${economia.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                } else { boxResultModal.classList.add('hidden'); }
+            });
+        }
+
+        function enviarWhatsLeadHero(e) {
+            e.preventDefault();
+            let nome = document.getElementById("lead-nome-hero").value;
+            let cidade = document.getElementById("lead-cidade-hero").value;
+            let conta = inputHeroConta.value;
+            if(!nome || !cidade || !conta) return alert("Por favor, preencha todos os campos!");
+            let msg = `Olá Gleidson! Sou ${nome} de ${cidade} e vi na página de Taubaté que posso economizar R$ ${(conta*0.90).toFixed(2)} por mês. Quero a proposta completa.`;
+            window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
+        }
+
+        function enviarWhatsModal(e) {
+            e.preventDefault();
+            let nome = document.getElementById("modal-nome").value;
+            let cidade = document.getElementById("modal-cidade").value;
+            let conta = inputContaModal.value;
+            if(!nome || !cidade || !conta) return alert("Preencha todos os campos!");
+            let msg = `Olá Gleidson! Sou ${nome} de ${cidade} e em Taubaté vi que posso economizar R$ ${(conta*0.90).toFixed(2)} mensalmente. Quero o orçamento.`;
+            window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
+        }
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        if(menuBtn) menuBtn.onclick = () => { mobileNav.classList.toggle('hidden'); mobileNav.classList.toggle('flex'); };
+        const closeNav = document.getElementById('close-menu');
+        if(closeNav) closeNav.onclick = () => { mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex'); };
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+    </script>
+</body>
+</html>
