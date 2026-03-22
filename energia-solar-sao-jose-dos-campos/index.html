@@ -7,7 +7,6 @@
     <!-- SEO ESTRATÉGICO LOCAL -->
     <title>Energia Solar em São José dos Campos | De Norte a Sul | Fonte Energia Solar</title>
     <meta name="description" content="Instalação de energia solar em São José dos Campos com economia de até 90%. Atendimento especializado de Norte a Sul de SJC. Homologação técnica junto à EDP São Paulo.">
-    <!-- Canonical ajustada para estrutura de pasta -->
     <link rel="canonical" href="https://fonteenergiasolar.com.br/energia-solar-sao-jose-dos-campos/">
 
     <!-- Open Graph -->
@@ -79,18 +78,18 @@
     <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Vi%20a%20página%20de%20SJC%20e%20gostaria%20de%20um%20estudo%20personalizado." 
        target="_blank" aria-label="Falar no WhatsApp"
        class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 drop-shadow-xl">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16">
+        <img src="../img/whatsapp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'">
     </a>
 
     <!-- Modal Calculadora -->
     <div id="modal-calc" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
         <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8 relative">
             <button id="close-modal" class="absolute top-5 right-5 text-slate-500 hover:text-brandNavy transition-colors" aria-label="Fechar"><i data-lucide="x" class="w-6 h-6"></i></button>
-            <div class="text-center mb-8">
-                <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight leading-none italic">Calculadora de Economia</h3>
-                <p class="text-slate-900 text-[10px] mt-2 uppercase tracking-widest font-bold text-brandGold">Cálculo de 90% para SJC</p>
+            <div class="text-center mb-8 leading-none">
+                <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Calculadora de Economia</h3>
+                <p class="text-slate-900 text-[10px] mt-2 uppercase tracking-widest font-bold text-brandGold leading-none">Cálculo de 90% para SJC</p>
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 font-sans text-center">
                 <input id="modal-nome" type="text" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-center font-bold text-sm text-brandText uppercase tracking-tighter">
                 <input id="modal-cidade" type="text" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-center font-bold text-sm text-brandText uppercase tracking-tighter">
                 <div>
@@ -100,11 +99,11 @@
                         <input type="number" id="input-conta-modal" placeholder="0,00" class="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 text-center text-sm font-bold text-brandNavy outline-none focus:ring-2 focus:ring-brandGold">
                     </div>
                 </div>
-                <div id="box-result-modal" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center">
+                <div id="box-result-modal" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center border border-white/5">
                     <p class="text-[9px] uppercase font-bold opacity-70 mb-1 leading-none">Poupança em SJC</p>
                     <p id="display-result-modal" class="text-2xl font-black text-brandGold">R$ 0,00</p>
                 </div>
-                <button onclick="enviarWhatsModal(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl shadow-md uppercase text-[10px] tracking-widest italic">
+                <button onclick="enviarWhatsModal(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl shadow-md uppercase text-[10px] tracking-widest">
                     Receber Estudo em SJC
                 </button>
             </div>
@@ -114,97 +113,101 @@
     <!-- Header Sincronizado -->
     <header class="bg-white border-b border-slate-100 sticky top-0 z-40 leading-none">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center leading-none">
-            <a href="../index_v2.html">
+            <a href="https://fonteenergiasolarvale.com.br">
                 <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Fonte Energia Solar Logo" class="h-9 w-auto">
             </a>
             <nav class="hidden lg:flex items-center gap-6 text-[9px] font-black tracking-widest text-brandNavy font-sans uppercase leading-none">
-                <a href="../index_v2.html" class="hover:text-blue-600 transition-colors">Home</a>
-                <a href="../sobre.html" class="hover:text-blue-600 transition-colors">Sobre</a>
+                <a href="../" class="hover:text-blue-600 transition-colors font-black">Home</a>
+                <a href="../sobre/" class="hover:text-blue-600 transition-colors font-black">Sobre</a>
                 <div class="relative group cursor-default leading-none">
-                    <span class="hover:text-blue-600 transition-colors flex items-center gap-1 uppercase italic font-black">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
+                    <span class="hover:text-blue-600 transition-colors flex items-center gap-1 uppercase font-black">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
                     <div class="absolute top-full left-0 hidden group-hover:block pt-2 min-w-[260px] animate-in fade-in zoom-in-95 leading-none z-50">
                         <div class="bg-white shadow-2xl rounded-xl border border-slate-100 p-4">
-                            <ul class="space-y-2 text-brandNavy font-black text-[9px] uppercase tracking-wider italic leading-none">
-                                <li><a href="../energia-solar-sao-jose-dos-campos/" class="text-blue-700 border-b border-brandGold/30 pb-2 flex justify-between items-center italic">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
+                            <ul class="space-y-2 text-brandNavy font-black text-[9px] uppercase tracking-wider leading-none">
+                                <li><a href="../energia-solar-sao-jose-dos-campos/" class="text-blue-700 border-b border-brandGold/30 pb-2 flex justify-between items-center font-black tracking-tighter">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
                                 <li><a href="../energia-solar-jacarei/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between">Jacareí <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
                                 <li><a href="../energia-solar-taubate/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between">Taubaté <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
                                 <li><a href="../energia-solar-cacapava/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between">Caçapava <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
                                 <li><a href="../energia-solar-pindamonhangaba/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between">Pindamonhangaba <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
                                 <li><a href="../energia-solar-guaratingueta/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between">Guaratinguetá <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
                                 <li><a href="../energia-solar-lorena/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between uppercase">Lorena <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li class="pt-3 border-t border-slate-100">
+                                    <a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região%20do%20Vale." target="_blank" class="text-brandGold font-black flex items-center gap-2 border border-brandGold/20 p-2 rounded-lg hover:bg-brandGold hover:text-brandNavy transition-all uppercase tracking-tighter">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <a href="../blog.html" class="text-blue-600 font-extrabold italic leading-none">Blog</a>
-                <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex');" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] hover:bg-slate-800 transition-all font-bold tracking-widest uppercase shadow-sm">Calculadora de Economia</button>
+                <a href="../blog/" class="text-blue-600 font-black leading-none uppercase">Blog</a>
+                <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex');" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] font-bold tracking-widest uppercase shadow-sm">Calculadora de Economia</button>
             </nav>
             <button class="lg:hidden text-brandNavy font-sans leading-none" id="mobile-menu-btn" aria-label="Abrir menu"><i data-lucide="menu" class="w-6 h-6 leading-none"></i></button>
         </div>
     </header>
 
     <!-- Mobile Nav -->
-    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col p-8 text-white overflow-y-auto transition-all font-sans leading-none">
+    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col p-8 text-white overflow-y-auto transition-all font-sans leading-none text-center">
         <div class="flex justify-between items-center mb-10 leading-none">
-            <span class="font-bold text-[10px] uppercase tracking-[0.3em] opacity-40 italic">Menu SJC</span>
-            <button id="close-menu" aria-label="Fechar menu"><i data-lucide="x" class="w-7 h-7"></i></button>
+            <span class="font-bold text-[10px] uppercase tracking-[0.3em] opacity-40">Menu SJC</span>
+            <button id="close-menu" aria-label="Fechar menu"><i data-lucide="x" class="w-7 h-7 text-white"></i></button>
         </div>
         <div class="flex flex-col gap-6 text-[12px] font-bold uppercase tracking-widest mb-10">
-            <a href="../index_v2.html" class="text-brandGold italic font-black">Home</a>
-            <a href="../sobre.html">Sobre</a>
+            <a href="../">Home</a>
+            <a href="../sobre/">Sobre</a>
             <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex'); document.getElementById('mobile-nav').classList.add('hidden');" class="text-left uppercase">Calculadora SJC</button>
-            <a href="../blog.html" class="text-blue-400 font-extrabold italic uppercase">Blog Técnico</a>
+            <a href="../blog/" class="text-blue-400 font-extrabold uppercase">Blog Técnico</a>
         </div>
         <div class="pt-8 border-t border-white/10 font-sans">
-            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 italic leading-none uppercase">Cidades Atendidas</p>
-            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider italic text-slate-400 font-sans leading-none">
-                <li><a href="../energia-solar-sao-jose-dos-campos/" class="text-brandGold flex justify-between items-center">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
+            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black">Cidades Atendidas</p>
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-400 font-sans leading-none">
+                <li><a href="../energia-solar-sao-jose-dos-campos/" class="text-brandGold">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
                 <li><a href="../energia-solar-jacarei/">Jacareí</a></li>
                 <li><a href="../energia-solar-taubate/">Taubaté</a></li>
-                <li><a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região." target="_blank" class="text-brandGold font-black flex justify-between items-center italic uppercase text-[9px]">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a></li>
+                <li class="pt-4 border-t border-white/5"><a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região." target="_blank" class="text-brandGold font-black flex justify-between items-center uppercase text-[9px]">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a></li>
             </ul>
         </div>
     </div>
 
     <main>
         <!-- HERO SJC INTEGRADO -->
-        <section class="relative min-h-[550px] md:min-h-[600px] flex items-center bg-brandNavy overflow-hidden reveal">
+        <section class="relative min-h-[550px] md:min-h-[620px] flex items-center bg-brandNavy overflow-hidden reveal font-sans">
             <div class="absolute inset-0 z-0">
                 <img src="../img/energia-solar-sao-jose-dos-campos.webp" alt="Instalação de energia solar em São José dos Campos SP" class="w-full h-full object-cover opacity-50" loading="eager" onerror="this.src='../img/painel-solar-hero-background.webp'">
                 <div class="absolute inset-0 hero-overlay leading-none"></div>
             </div>
             <div class="container mx-auto px-6 relative z-10 font-sans">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 md:space-y-8 text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans">
+                <div class="grid lg:grid-cols-2 gap-12 items-center text-center md:text-left">
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans mx-auto md:mx-0">
                             <span class="w-1.5 h-1.5 bg-brandGold rounded-full animate-pulse leading-none"></span>
-                            <span class="text-[9px] font-black uppercase tracking-widest text-white leading-none">Especialista Regional: Gleidson Nascimento</span>
+                            <span class="text-[8px] font-black uppercase tracking-widest text-white leading-none">Especialista Regional: Gleidson Nascimento</span>
                         </div>
-                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-tight italic font-sans text-white">
-                            Energia Solar em São José dos Campos <br>Atendimento Local com <span class="text-brandGold italic font-black">90% de economia</span>
+                        <h1 class="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider leading-relaxed font-sans text-white">
+                            Energia Solar em São José dos Campos <br><span class="text-brandGold font-black">90% de economia na sua conta</span>
                         </h1>
-                        <p class="text-sm md:text-lg opacity-95 font-bold italic text-white leading-relaxed">
+                        <p class="text-sm md:text-lg opacity-95 font-black text-white leading-relaxed normal-case">
                             Líder em instalação e homologação técnica conforme os padrões da <strong>EDP São Paulo</strong>. Atendemos de Norte a Sul de SJC.
                         </p>
                     </div>
 
                     <!-- Calculadora Integrada no Hero (SJC) -->
-                    <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal">
-                        <div class="text-center mb-6">
-                            <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight italic leading-none">Simule em SJC</h3>
-                            <p class="text-slate-600 text-[9px] mt-2 uppercase tracking-widest font-black italic">Estudo técnico gratuito</p>
+                    <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal mx-auto w-full max-w-md">
+                        <div class="text-center mb-6 leading-none">
+                            <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Simule em SJC</h3>
+                            <p class="text-slate-600 text-[9px] mt-2 uppercase tracking-widest font-black leading-none">Estudo técnico gratuito</p>
                         </div>
                         <div class="space-y-4 font-sans text-center">
-                            <input type="text" id="lead-nome-hero" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText italic uppercase tracking-tighter shadow-inner text-center">
+                            <input type="text" id="lead-nome-hero" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
+                            <input type="text" id="lead-cidade-hero" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
                             <div class="relative">
-                                <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-black text-sm leading-none italic font-black">R$</span>
-                                <input type="number" id="input-hero-conta" placeholder="Valor da conta mensal" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandNavy text-center transition-all italic uppercase tracking-tighter font-black">
+                                <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-black text-sm leading-none">R$</span>
+                                <input type="number" id="input-hero-conta" placeholder="Valor da conta mensal" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandNavy text-center transition-all uppercase tracking-tighter font-black">
                             </div>
                             <div id="hero-result-box" class="hidden p-5 rounded-2xl bg-brandNavy text-white text-center animate-in fade-in slide-in-from-top-2 border border-white/5">
-                                <p class="text-[9px] uppercase font-bold opacity-60 mb-1 leading-none italic font-sans">Poupança mensal em SJC:</p>
+                                <p class="text-[9px] uppercase font-bold opacity-60 mb-1 leading-none font-sans font-black">Poupança mensal em SJC:</p>
                                 <p id="hero-display-result" class="text-2xl font-black text-brandGold tracking-tight font-sans">R$ 0,00</p>
                             </div>
-                            <button onclick="enviarWhatsLeadHero(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl active:scale-95 transition-all text-[10px] uppercase tracking-widest shadow-md italic font-sans font-black">
+                            <button onclick="enviarWhatsLeadHero(event)" class="w-full bg-brandGold text-brandNavy font-black py-4 rounded-xl active:scale-95 transition-all text-[10px] uppercase tracking-widest shadow-md font-sans font-black">
                                 Garantir Economia em SJC
                             </button>
                         </div>
@@ -214,9 +217,9 @@
         </section>
 
         <!-- TICKER SJC -->
-        <div class="bg-brandGold py-3 border-y border-yellow-500 overflow-hidden relative z-20 font-sans leading-none uppercase italic">
+        <div class="bg-brandGold py-3 border-y border-yellow-500 overflow-hidden relative z-20 font-sans leading-none uppercase">
             <div class="ticker-container">
-                <div class="ticker-content animate-ticker flex items-center gap-8 text-[9px] font-black uppercase tracking-[0.2em] text-brandNavy italic leading-none">
+                <div class="ticker-content animate-ticker flex items-center gap-8 text-[9px] font-black uppercase tracking-[0.2em] text-brandNavy leading-none">
                     <span>Atendimento de Norte a Sul em SJC •</span>
                     <span>Economia de até 90% na conta de luz •</span>
                     <span>Homologação junto à EDP São Paulo •</span>
@@ -227,17 +230,17 @@
         </div>
 
         <!-- CONTEÚDO ESTRATÉGICO SJC -->
-        <section class="py-16 md:py-28 bg-white reveal leading-relaxed font-sans">
+        <section class="py-16 md:py-28 bg-white reveal leading-relaxed font-sans text-brandText">
             <div class="container mx-auto px-6 max-w-6xl text-center md:text-left font-sans">
                 <div class="grid lg:grid-cols-2 gap-16 items-center leading-relaxed">
                     <div class="space-y-6">
-                        <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase tracking-tighter leading-tight italic uppercase font-sans">
+                        <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase tracking-tighter leading-tight font-sans">
                             Reduza sua conta de luz em São José dos Campos
                         </h2>
-                        <div class="space-y-4 text-brandText text-sm md:text-base leading-relaxed font-bold italic font-sans">
-                            <p>Instalar energia solar em São José dos Campos é a decisão financeira mais inteligente do ano. Atendemos também cidades próximas como <a href="../energia-solar-jacarei/" class="text-blue-600 underline decoration-brandGold">Jacareí</a> e <a href="../energia-solar-taubate/" class="text-blue-600 underline decoration-brandGold">Taubaté</a>, garantindo que cada projeto siga rigorosamente as normas técnicas de homologação junto à <strong>EDP São Paulo</strong>.</p>
+                        <div class="space-y-4 text-brandText text-sm md:text-base leading-relaxed font-black font-sans uppercase tracking-tight">
+                            <p>Instalar energia solar em São José dos Campos é a decisão financeira mais inteligente do ano. Atendemos também cidades próximas como <a href="../energia-solar-jacarei/" class="text-blue-600 underline decoration-brandGold">Jacareí</a> e <a href="../energia-solar-taubate/" class="text-blue-700 underline decoration-brandGold">Taubaté</a>, garantindo que cada projeto siga rigorosamente as normas técnicas de homologação junto à <strong>EDP São Paulo</strong>.</p>
                             <p>Atendemos bairros de todas as regiões com prontidão:</p>
-                            <ul class="space-y-2 border-l-2 border-brandGold pl-4 font-black uppercase text-[11px] tracking-tight font-sans">
+                            <ul class="space-y-2 border-l-4 border-brandGold pl-4 font-black uppercase text-[11px] tracking-widest font-sans">
                                 <li>Zona Oeste: Urbanova, Jd. Aquarius e Vila Ema</li>
                                 <li>Zona Sul: Jardim Satélite, Bosque e Jd. América</li>
                                 <li>Zona Norte: Santana e Altos de Santana</li>
@@ -246,9 +249,9 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="../img/painel-solar-residencial-sjc.webp" alt="Instalação de energia solar em São José dos Campos SP" class="rounded-3xl shadow-2xl grayscale-[10%] hover:grayscale-0 transition-all duration-700 aspect-square object-cover" onerror="this.src='../img/painel-solar-hero-background.webp'">
+                        <img src="../img/painel-solar-residencial-sjc.webp" alt="Instalação de energia solar em São José dos Campos SP" class="rounded-[2.5rem] shadow-2xl grayscale-[10%] hover:grayscale-0 transition-all duration-700 aspect-square object-cover" onerror="this.src='../img/painel-solar-hero-background.webp'">
                         <div class="absolute -bottom-6 -right-6 bg-brandGold p-6 rounded-2xl shadow-xl hidden md:block">
-                            <p class="text-brandNavy font-black uppercase text-xs italic leading-none">90% DE ECONOMIA<br><span class="text-[9px] opacity-70">EM TODA SJC</span></p>
+                            <p class="text-brandNavy font-black uppercase text-[10px] leading-none font-sans text-center">90% DE ECONOMIA<br><span class="text-[9px] opacity-70 uppercase font-black">EM TODA SJC</span></p>
                         </div>
                     </div>
                 </div>
@@ -258,74 +261,79 @@
         <!-- SEÇÃO: POR QUE ESCOLHER (Processo SJC) -->
         <section class="py-20 md:py-32 bg-slate-50 reveal font-sans">
             <div class="container mx-auto px-6 max-w-5xl text-center">
-                <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase italic mb-16 font-sans">Empresa de Energia Solar em SJC</h2>
+                <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase mb-16 font-sans">Empresa de Energia Solar em SJC</h2>
                 <div class="grid md:grid-cols-3 gap-8 text-left">
                     <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                         <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="shield-check"></i></div>
-                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3 italic">Padrão EDP</h3>
-                        <p class="text-xs text-brandText font-bold italic leading-relaxed">Cuidamos de toda a homologação técnica conforme os padrões da <strong>EDP São Paulo</strong>, garantindo segurança jurídica.</p>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Padrão EDP</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Cuidamos de toda a homologação técnica conforme os padrões da <strong>EDP São Paulo</strong>, garantindo sua segurança.</p>
                     </div>
                     <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                         <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="zap"></i></div>
-                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3 italic">Retorno Rápido</h3>
-                        <p class="text-xs text-brandText font-bold italic leading-relaxed">Sistemas dimensionados para o clima de SJC, garantindo que o investimento se pague entre 4 a 5 anos.</p>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Retorno Rápido</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Sistemas dimensionados para o clima de SJC, garantindo que o investimento se pague entre 4 a 5 anos.</p>
                     </div>
                     <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                         <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-brandGold mb-6 shadow-inner"><i data-lucide="map-pin"></i></div>
-                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3 italic">Presença Local</h3>
-                        <p class="text-xs text-brandText font-bold italic leading-relaxed">Atendimento presencial em São José dos Campos para suporte e manutenção técnica ágil.</p>
+                        <h3 class="font-black text-brandNavy uppercase text-xs mb-3">Presença Local</h3>
+                        <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">Atendimento presencial em São José dos Campos para suporte e manutenção técnica ágil e eficiente.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- RODAPÉ REFACTORADO (RSA Digital) -->
-    <footer id="contato" class="bg-white pt-24 pb-0 font-sans border-t border-slate-100 reveal relative overflow-hidden text-brandText font-bold uppercase shadow-inner">
-        <div class="container mx-auto px-6 mb-16 leading-none italic font-sans">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left items-start leading-none uppercase">
+    <!-- RODAPÉ REFACTORADO (RSA Digital - Sincronizado) -->
+    <footer id="contato" class="bg-white pt-24 pb-0 font-sans border-t border-slate-100 reveal relative overflow-hidden text-brandText font-black uppercase shadow-inner">
+        <div class="container mx-auto px-6 mb-16 leading-none font-sans uppercase">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left items-start leading-none">
+                
                 <div class="space-y-6 text-center md:text-left leading-none font-sans">
-                    <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans grayscale brightness-0">
-                    <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest italic leading-relaxed font-sans">
-                        Reduza a sua fatura mensal ao mínimo técnico com suporte especializado em SJC e todo o Vale.
+                    <a href="https://fonteenergiasolarvale.com.br">
+                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans">
+                    </a>
+                    <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest leading-relaxed font-sans">
+                        Referência em projetos fotovoltaicos. Reduza a sua fatura mensal ao mínimo técnico com suporte especializado em SJC e todo o Vale.
                     </p>
                 </div>
+
                 <div class="space-y-6 leading-none font-sans">
-                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest italic border-l-4 border-brandGold pl-4 uppercase leading-none italic">Institucional</h4>
-                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans italic italic">
-                        <li><a href="../index_v2.html" class="hover:text-brandGold transition-colors font-sans italic">Página Inicial</a></li>
-                        <li><a href="../sobre.html" class="hover:text-brandGold transition-colors font-sans italic">Sobre Nós</a></li>
-                        <li><a href="../blog.html" class="hover:text-brandGold transition-colors font-black uppercase font-sans italic">Blog Técnico</a></li>
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none">Institucional</h4>
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans">
+                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Página Inicial</a></li>
+                        <li><a href="../sobre/" class="hover:text-brandGold transition-colors font-sans">Sobre Nós</a></li>
+                        <li><a href="../blog/" class="hover:text-brandGold transition-colors font-black font-sans">Blog Técnico</a></li>
                     </ul>
                 </div>
+
                 <div class="space-y-6 lg:col-span-2 leading-none font-sans">
-                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest italic border-l-4 border-brandGold pl-4 font-sans uppercase leading-none italic">Cidades Atendidas</h4>
-                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-[9px] font-black uppercase tracking-widest italic font-sans font-bold italic">
-                        <a href="../energia-solar-sao-jose-dos-campos/" class="text-blue-700 font-black italic">São José dos Campos</a>
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none">Cidades Atendidas</h4>
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-[9px] font-black uppercase tracking-widest font-sans font-black">
+                        <a href="../energia-solar-sao-jose-dos-campos/" class="text-blue-700 font-black">São José dos Campos</a>
                         <a href="../energia-solar-jacarei/" class="hover:text-brandGold transition-all">Jacareí</a>
                         <a href="../energia-solar-taubate/" class="hover:text-brandGold transition-all">Taubaté</a>
-                        <a href="../energia-solar-cacapava/" class="hover:text-brandGold transition-all">Caçapava</a>
-                        <a href="../energia-solar-pindamonhangaba/" class="hover:text-brandGold transition-all">Pindamonhangaba</a>
-                        <a href="../energia-solar-guaratingueta/" class="hover:text-brandGold transition-all">Guaratinguetá</a>
-                        <a href="../energia-solar-lorena/" class="hover:text-brandGold transition-all">Lorena</a>
-                        <a href="https://wa.me/5512996368707?text=Consultar%20outra%20região." target="_blank" class="text-brandGold font-black hover:underline uppercase tracking-tighter italic">Outras cidades</a>
+                        <a href="../energia-solar-cacapava/" class="hover:text-brandGold transition-all font-bold">Caçapava</a>
+                        <a href="../energia-solar-pindamonhangaba/" class="hover:text-brandGold transition-all font-bold">Pindamonhangaba</a>
+                        <a href="../energia-solar-guaratingueta/" class="hover:text-brandGold transition-all font-bold">Guaratinguetá</a>
+                        <a href="../energia-solar-lorena/" class="hover:text-brandGold transition-all font-black">Lorena</a>
+                        <a href="https://wa.me/5512996368707?text=Consultar%20outra%20região." target="_blank" class="text-brandGold font-black hover:underline uppercase tracking-tighter leading-none font-sans">Outras cidades sob consulta</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Barra Inferior RSA Digital (Centralizada) -->
-        <div class="bg-slate-900 py-10 border-t border-white/5 pb-20 md:pb-16 px-6 text-center italic">
-            <div class="container mx-auto flex flex-col items-center justify-center gap-6">
-                <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] italic text-center leading-none font-sans italic">
+        <div class="bg-slate-900 py-10 border-t border-white/5 pb-20 md:pb-16 px-6 text-center">
+            <div class="container mx-auto flex flex-col items-center justify-center gap-6 leading-none font-sans font-black">
+                <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] text-center leading-none font-sans">
                     Fonte Energia Solar Vale - © 2026 - Gleidson Nascimento
                 </p>
-                <div class="text-[11px] text-slate-400 font-bold font-sans italic text-center uppercase leading-none tracking-wider font-sans italic">
+                <div class="text-[11px] text-slate-400 font-bold font-sans text-center uppercase leading-none tracking-wider font-sans">
                     Desenvolvido por 
                     <a href="https://wa.me/5512988052097?text=Olá%20Rafael!%20Vi%20o%20site%20da%20Fonte%20Energia%20Solar%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20RSA%20Digital." 
                        target="_blank" 
-                       class="text-brandGold font-black hover:underline transition-all font-sans italic tracking-widest italic">RSA Digital</a> 
-                    | Soluções Digitais e GMN
+                       class="text-brandGold font-black hover:underline transition-all font-sans tracking-widest">RSA Digital</a> 
+                    | SOLUÇÕES DIGITAIS E GOOGLE MEU NEGÓCIO
                 </div>
             </div>
         </div>
@@ -335,7 +343,6 @@
         lucide.createIcons();
         const modal = document.getElementById('modal-calc');
         const openBtn = document.getElementById('open-calc');
-        const openBtnMobile = document.getElementById('open-calc-mobile');
         const closeBtn = document.getElementById('close-modal');
         const inputContaModal = document.getElementById('input-conta-modal');
         const boxResultModal = document.getElementById('box-result-modal');
@@ -349,7 +356,6 @@
         };
 
         if(openBtn) openBtn.onclick = () => toggleModal(true);
-        if(openBtnMobile) openBtnMobile.onclick = () => { toggleNav(false); toggleModal(true); };
         if(closeBtn) closeBtn.onclick = () => toggleModal(false);
         modal.onclick = (e) => { if(e.target === modal) toggleModal(false); };
 
@@ -380,9 +386,10 @@
         function enviarWhatsLeadHero(e) {
             e.preventDefault();
             let nome = document.getElementById("lead-nome-hero").value;
+            let cidade = document.getElementById("lead-cidade-hero").value;
             let conta = inputHeroConta.value;
-            if(!nome || !conta) return alert("Por favor, preencha nome e valor da conta!");
-            let msg = `Olá Gleidson! Sou ${nome} de SJC e vi no site que posso economizar R$ ${(conta*0.90).toFixed(2)} por mês. Quero a proposta completa para São José.`;
+            if(!nome || !cidade || !conta) return alert("Por favor, preencha todos os campos!");
+            let msg = `Olá Gleidson! Sou ${nome} de ${cidade} e vi no site de SJC que posso economizar R$ ${(conta*0.90).toFixed(2)} por mês. Quero a proposta completa para São José.`;
             window.open(`https://wa.me/5512996368707?text=${encodeURIComponent(msg)}`);
         }
 
@@ -397,11 +404,10 @@
         }
 
         const menuBtn = document.getElementById('mobile-menu-btn');
-        const closeNav = document.getElementById('close-menu');
         const mobileNav = document.getElementById('mobile-nav');
-        const toggleNav = (show) => { mobileNav.classList.toggle('hidden', !show); mobileNav.classList.toggle('flex', show); };
-        if(menuBtn) menuBtn.onclick = () => toggleNav(true);
-        if(closeNav) closeNav.onclick = () => toggleNav(false);
+        if(menuBtn) menuBtn.onclick = () => { mobileNav.classList.toggle('hidden'); mobileNav.classList.toggle('flex'); };
+        const closeNav = document.getElementById('close-menu');
+        if(closeNav) closeNav.onclick = () => { mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex'); };
 
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
