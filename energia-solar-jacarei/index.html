@@ -155,9 +155,9 @@
             <button onclick="document.getElementById('modal-calc').classList.remove('hidden'); document.getElementById('modal-calc').classList.add('flex'); document.getElementById('mobile-nav').classList.add('hidden');" class="text-left uppercase">Calculadora Jacareí</button>
             <a href="../blog/" class="text-blue-400 font-extrabold uppercase">Blog Técnico</a>
         </div>
-        <div class="pt-8 border-t border-white/10 font-sans">
-            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black">Cidades Atendidas</p>
-            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-black text-slate-400 font-sans leading-none">
+        <div class="pt-8 border-t border-white/10 font-sans text-center">
+            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 italic leading-none uppercase font-black">Cidades Atendidas</p>
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-400 font-sans leading-none text-center">
                 <li><a href="../energia-solar-sao-jose-dos-campos/">São José dos Campos</a></li>
                 <li><a href="../energia-solar-jacarei/" class="text-brandGold">Jacareí <i data-lucide="chevron-right" class="w-3 h-3"></i></a></li>
                 <li><a href="../energia-solar-taubate/">Taubaté</a></li>
@@ -174,29 +174,29 @@
                 <div class="absolute inset-0 hero-overlay leading-none"></div>
             </div>
             <div class="container mx-auto px-6 relative z-10 font-sans">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 md:space-y-8 text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans">
+                <div class="grid lg:grid-cols-2 gap-12 items-center text-center md:text-left">
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans mx-auto md:mx-0">
                             <span class="w-1.5 h-1.5 bg-brandGold rounded-full animate-pulse leading-none"></span>
                             <span class="text-[8px] font-black uppercase tracking-widest text-white leading-none">Especialista Regional: Gleidson Nascimento</span>
                         </div>
-                        <h1 class="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider leading-relaxed font-sans text-white">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider leading-relaxed font-sans text-white">
                             Energia Solar em Jacareí <br><span class="text-brandGold font-black">Economia de até 90% na sua conta</span>
                         </h1>
-                        <p class="text-sm md:text-lg opacity-95 font-black text-white leading-relaxed normal-case">
+                        <p class="text-sm md:text-lg opacity-95 font-bold text-white leading-relaxed normal-case">
                             Projetos personalizados e homologação técnica junto à <strong>EDP São Paulo</strong>. Atendimento especializado em toda a cidade de Jacareí.
                         </p>
                     </div>
 
                     <!-- Calculadora Integrada no Hero -->
-                    <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal">
+                    <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal mx-auto w-full max-w-md">
                         <div class="text-center mb-6 leading-none">
                             <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Simule em Jacareí</h3>
                             <p class="text-slate-600 text-[9px] mt-2 uppercase tracking-widest font-black leading-none">Estudo técnico gratuito</p>
                         </div>
                         <div class="space-y-4 font-sans text-center">
-                            <input type="text" id="lead-nome-hero" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-black text-brandText uppercase tracking-tighter shadow-inner text-center">
-                            <input type="text" id="lead-cidade-hero" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-black text-brandText uppercase tracking-tighter shadow-inner text-center">
+                            <input type="text" id="lead-nome-hero" placeholder="Seu nome" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
+                            <input type="text" id="lead-cidade-hero" placeholder="Sua cidade" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 px-6 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandText uppercase tracking-tighter shadow-inner text-center">
                             <div class="relative">
                                 <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brandNavy font-black text-sm leading-none">R$</span>
                                 <input type="number" id="input-hero-conta" placeholder="Valor da conta mensal" class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 outline-none focus:ring-1 focus:ring-brandGold text-[11px] font-bold text-brandNavy text-center transition-all uppercase tracking-tighter font-black">
@@ -250,7 +250,7 @@
                     <div class="relative">
                         <img src="../img/painel-solar-residencial-sjc.webp" alt="Instalação de energia solar em Jacareí SP" class="rounded-[2.5rem] shadow-2xl grayscale-[10%] hover:grayscale-0 transition-all duration-700 aspect-square object-cover" onerror="this.src='../img/painel-solar-hero-background.webp'">
                         <div class="absolute -bottom-6 -right-6 bg-brandGold p-6 rounded-2xl shadow-xl hidden md:block">
-                            <p class="text-brandNavy font-black uppercase text-[10px] leading-none font-sans">90% DE ECONOMIA<br><span class="text-[9px] opacity-70 uppercase font-black">PROJETOS EM JACAREÍ</span></p>
+                            <p class="text-brandNavy font-black uppercase text-[10px] leading-none font-sans text-center">90% DE ECONOMIA<br><span class="text-[9px] opacity-70 uppercase font-black">PROJETOS EM JACAREÍ</span></p>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
                 
                 <div class="space-y-6 text-center md:text-left leading-none font-sans">
                     <a href="https://fonteenergiasolarvale.com.br">
-                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans grayscale brightness-0">
+                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans">
                     </a>
                     <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest leading-relaxed font-sans">
                         Referência em projetos fotovoltaicos. Reduza a sua fatura mensal ao mínimo técnico com suporte especializado em Jacareí.
@@ -340,7 +340,7 @@
                 <div class="space-y-6 leading-none font-sans">
                     <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none">Institucional</h4>
                     <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans">
-                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Home</a></li>
+                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Página Inicial</a></li>
                         <li><a href="../sobre/" class="hover:text-brandGold transition-colors font-sans">Sobre Nós</a></li>
                         <li><a href="../blog/" class="hover:text-brandGold transition-colors font-black font-sans">Blog Técnico</a></li>
                     </ul>
@@ -368,7 +368,7 @@
                 <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] text-center leading-none font-sans">
                     Fonte Energia Solar Vale - © 2026 - Gleidson Nascimento
                 </p>
-                <div class="text-[11px] text-slate-400 font-bold font-sans italic text-center uppercase leading-none tracking-wider font-sans">
+                <div class="text-[11px] text-slate-400 font-bold font-sans text-center uppercase leading-none tracking-wider font-sans">
                     Desenvolvido por 
                     <a href="https://wa.me/5512988052097?text=Olá%20Rafael!%20Vi%20o%20site%20da%20Fonte%20Energia%20Solar%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20RSA%20Digital." 
                        target="_blank" 
