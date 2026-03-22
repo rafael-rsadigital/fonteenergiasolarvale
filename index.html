@@ -188,7 +188,7 @@
         </div>
         <div class="pt-8 border-t border-white/10">
             <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black">Cidades Atendidas</p>
-            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-300 leading-none">
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-300 leading-none text-center">
                 <li><a href="energia-solar-sao-jose-dos-campos.html">São José dos Campos</a></li>
                 <li><a href="energia-solar-jacarei.html">Jacareí</a></li>
                 <li><a href="energia-solar-taubate.html">Taubaté</a></li>
@@ -222,7 +222,7 @@
                         </p>
                     </div>
 
-                    <!-- Calculadora Integrada no Hero (Refatorada) -->
+                    <!-- Calculadora Integrada no Hero -->
                     <div class="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 reveal mx-auto w-full max-w-md">
                         <div class="text-center mb-6 leading-none">
                             <h3 class="text-lg font-black text-brandNavy uppercase tracking-tight">Calculadora de Economia</h3>
@@ -267,7 +267,7 @@
 
         <!-- SEÇÃO BENTO GRID COM BACKGROUND IMAGE -->
         <section class="py-20 md:py-32 reveal relative overflow-hidden" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('img/painel-solar-residencial-sjc.webp'); background-size: cover; background-position: center; background-attachment: fixed;">
-            <div class="container mx-auto px-6 max-w-6xl relative z-10 font-sans">
+            <div class="container mx-auto px-6 max-w-6xl relative z-10 font-sans text-center md:text-left">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left items-start">
                     <div class="md:col-span-2 bg-brandNavy rounded-[2.5rem] p-10 md:p-12 text-white relative overflow-hidden flex flex-col justify-end min-h-[350px] group shadow-2xl">
                         <img src="img/painel-solar-hero-background.webp" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700" alt="Placas">
@@ -336,7 +336,7 @@
             </div>
         </section>
 
-        <!-- FAQ COMPLETO (8 ITENS) -->
+        <!-- FAQ COMPLETO RESTAURADO (8 ITENS) -->
         <section id="faq" class="py-20 md:py-32 bg-white border-y border-slate-200 reveal font-sans">
             <div class="container mx-auto px-6 max-w-3xl">
                 <h3 class="text-[10px] font-black text-brandNavy text-center mb-12 uppercase tracking-[0.5em] opacity-50 leading-none uppercase font-black">Perguntas Frequentes</h3>
@@ -348,14 +348,55 @@
                         </summary>
                         <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">A economia pode chegar a até 90% na conta de energia, dependendo do consumo e do dimensionamento do sistema. Cada projeto é personalizado para maximizar o retorno financeiro.</p>
                     </details>
-                    <details class="group bg-slate-50 rounded-xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
                         <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
                             2. Energia solar funciona em dias nublados ou chuvosos?
                             <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
                         </summary>
                         <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Mesmo com baixa incidência solar direta, os painéis continuam gerando energia através da radiação difusa, garantindo produção constante durante o ano todo.</p>
                     </details>
-                    <!-- [Outros itens mantidos conforme Jacareí/SJC para consistência] -->
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            3. Quanto custa instalar energia solar?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">O valor varia conforme o consumo mensal do imóvel e o tamanho do sistema necessário. Realizamos uma análise personalizada para apresentar o orçamento mais vantajoso para você.</p>
+                    </details>
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            4. Em quanto tempo o investimento retorna?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Em média, o sistema se paga entre 4 a 5 anos através da própria economia gerada na fatura, oferecendo lucro direto por mais de 20 anos após esse período.</p>
+                    </details>
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            5. Preciso de manutenção no sistema?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">A manutenção é mínima. Normalmente envolve apenas a limpeza periódica dos painéis solares e o acompanhamento remoto do desempenho através do aplicativo oficial.</p>
+                    </details>
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            6. A instalação é regulamentada?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Todo o sistema segue rigorosamente as normas da ANEEL e passa por um processo de homologação técnica completa junto à concessionária de energia (EDP Vale).</p>
+                    </details>
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            7. Atendem minha cidade?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Atendemos todo o Vale do Paraíba, incluindo São José dos Campos, Jacareí, Taubaté, Caçapava, Pindamonhangaba, Guaratinguetá e Lorena.</p>
+                    </details>
+                    <details class="group bg-slate-50 rounded-2xl p-6 cursor-pointer border border-slate-200 shadow-sm">
+                        <summary class="font-black text-brandNavy list-none flex justify-between items-center uppercase text-[9px] tracking-widest leading-none">
+                            8. Posso financiar o sistema?
+                            <i data-lucide="plus" class="w-3 h-3 transition-transform group-open:rotate-45 text-brandGold"></i>
+                        </summary>
+                        <p class="mt-4 text-brandText text-sm leading-relaxed font-black opacity-90 font-sans tracking-tight">Sim. Existem excelentes opções de financiamento bancário onde a parcela mensal pode ser próxima ou até menor que o valor da sua economia na conta atual.</p>
+                    </details>
                 </div>
             </div>
         </section>
