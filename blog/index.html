@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO ESTRATÉGICO - HUB DO BLOG -->
+    <title>Blog de Energia Solar no Vale do Paraíba | Fonte Energia Solar</title>
+    <meta name="description" content="Conteúdos estratégicos sobre energia solar, economia, regras e viabilidade técnica no Vale do Paraíba. Entenda tudo antes de investir.">
+    <link rel="canonical" href="https://fonteenergiasolarvale.com.br/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog de Energia Solar no Vale do Paraíba | Fonte Energia Solar">
+    <meta property="og:description" content="Entenda tudo sobre energia solar, economia e regras antes de instalar o seu sistema.">
+    <meta property="og:image" content="../img/painel-solar-hero-background.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Schema de Blog (SEO Avançado) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Fonte Energia Solar Vale",
+      "url": "https://fonteenergiasolarvale.com.br/blog/",
+      "description": "Conteúdos sobre energia solar, economia e viabilidade técnica no Vale do Paraíba."
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandNavy: '#07294f',
+                        brandGold: '#fdcd06',
+                        brandText: '#0f172a',
+                        whatsapp: '#25D366',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 
+                        'ticker': 'ticker 8s linear infinite',
+                    },
+                    keyframes: { 
+                        ticker: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; font-size: 14px; color: #0f172a; }
+        .hero-overlay { background: linear-gradient(to right, rgba(7, 41, 79, 0.96) 20%, rgba(7, 41, 79, 0.4) 100%); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Nova Animação CSS Pura (Mais confiável) */
+        @keyframes revealText {
+            0% { opacity: 0; filter: blur(10px); transform: translateY(20px); }
+            100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+        }
+
+        .animated-text { 
+            opacity: 0; 
+            display: inline-block; 
+            animation: revealText 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Delays configurados para a sequência exata e lenta */
+        .delay-1 { animation-delay: 0.5s; } /* Vai instalar energia solar? */
+        .delay-2 { animation-delay: 2.5s; } /* Leia isso antes */
+        .delay-3 { animation-delay: 4.5s; } /* Tudo sobre custos, */
+        .delay-4 { animation-delay: 5.5s; } /* economia */
+        .delay-5 { animation-delay: 6.5s; } /* e aprovação */
+        .delay-6 { animation-delay: 7.5s; } /* no Vale do Paraíba */
+    </style>
+</head>
+
+<body class="bg-slate-50 text-brandText antialiased overflow-x-hidden">
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Estava%20lendo%20o%20blog%20e%20gostaria%20de%20um%20estudo%20personalizado." 
+       target="_blank" aria-label="Falar no WhatsApp"
+       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 drop-shadow-xl">
+        <img src="../img/whatsapp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'">
+    </a>
+
+    <!-- Header Sincronizado -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40 leading-none">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center leading-none text-brandNavy font-black">
+            <a href="https://fonteenergiasolarvale.com.br">
+                <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Fonte Energia Solar Logo" class="h-9 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-[9px] font-black tracking-widest text-brandNavy font-sans uppercase leading-none text-brandNavy">
+                <a href="../" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="../sobre/" class="hover:text-blue-600 transition-colors">Sobre</a>
+                <div class="relative group cursor-default leading-none text-left">
+                    <span class="hover:text-blue-600 transition-colors flex items-center gap-1 uppercase font-black">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
+                    <div class="absolute top-full left-0 hidden group-hover:block pt-2 min-w-[260px] animate-in fade-in zoom-in-95 leading-none z-50">
+                        <div class="bg-white shadow-2xl rounded-xl border border-slate-100 p-4 text-left">
+                            <ul class="space-y-2 text-brandNavy font-black text-[9px] uppercase tracking-wider leading-none text-left">
+                                <li><a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-jacarei/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">Jacareí <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-taubate/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">Taubaté <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-pindamonhangaba/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">Pindamonhangaba <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-cacapava/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">Caçapava <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-guaratingueta/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center text-left">Guaratinguetá <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-lorena/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between uppercase text-left">Lorena <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog/" class="text-blue-700 border-b-2 border-brandGold pb-1">Blog</a>
+                <a href="https://wa.me/5512996368707" target="_blank" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] font-bold tracking-widest uppercase shadow-sm">Solicitar Estudo</a>
+            </nav>
+            <button class="lg:hidden text-brandNavy font-sans leading-none" id="mobile-menu-btn" aria-label="Abrir menu"><i data-lucide="menu" class="w-6 h-6 leading-none"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Sincronizado - COMPLETO -->
+    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col p-8 text-white overflow-y-auto transition-all font-sans leading-none text-center">
+        <div class="flex justify-between items-center mb-10 leading-none text-white">
+            <span class="font-bold text-[10px] uppercase tracking-[0.3em] opacity-40 text-white">Portal do Conhecimento</span>
+            <button id="close-menu" aria-label="Fechar menu"><i data-lucide="x" class="w-7 h-7 text-white"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-[12px] font-bold uppercase tracking-widest mb-10 text-white">
+            <a href="../">Home</a>
+            <a href="../sobre/">Sobre Nós</a>
+            <a href="../blog/" class="text-brandGold">Blog Técnico</a>
+        </div>
+        <div class="pt-8 border-t border-white/10 font-sans text-center">
+            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black text-white">Conteúdo por Cidade</p>
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-400 font-sans leading-none">
+                <li><a href="../energia-solar-sao-jose-dos-campos/">São José dos Campos</a></li>
+                <li><a href="../energia-solar-jacarei/">Jacareí</a></li>
+                <li><a href="../energia-solar-taubate/">Taubaté</a></li>
+                <li><a href="../energia-solar-pindamonhangaba/">Pindamonhangaba</a></li>
+                <li><a href="../energia-solar-cacapava/">Caçapava</a></li>
+                <li><a href="../energia-solar-guaratingueta/">Guaratinguetá</a></li>
+                <li><a href="../energia-solar-lorena/">Lorena</a></li>
+                <li class="pt-4 border-t border-white/5"><a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região." target="_blank" class="text-brandGold font-black flex justify-between items-center uppercase text-[9px]">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO DO BLOG (ANIMAÇÃO CSS PURA CORRIGIDA) -->
+        <section class="relative min-h-[500px] flex items-center bg-brandNavy overflow-hidden font-sans">
+            <div class="absolute inset-0 z-0">
+                <img src="../img/painel-solar-hero-background.webp" alt="Blog de Energia Solar Vale" class="w-full h-full object-cover opacity-20" loading="eager">
+                <div class="absolute inset-0 hero-overlay leading-none"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 font-sans text-center md:text-left">
+                <div class="max-w-4xl space-y-6">
+                    <span class="text-brandGold text-[10px] font-black uppercase tracking-[0.4em] mb-4 block animated-text delay-1">Inteligência Solar</span>
+                    
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider leading-tight text-white font-sans">
+                        <div class="block mb-2">
+                            <span class="animated-text delay-1">Vai instalar energia solar?</span>
+                        </div>
+                        <div class="block mb-4">
+                            <span class="animated-text delay-2">Leia isso antes</span>
+                        </div>
+                        
+                        <!-- Subtítulo em Destaque Amarelo -->
+                        <div class="text-brandGold text-2xl md:text-4xl block leading-tight">
+                            <span class="animated-text delay-3">Tudo sobre custos,</span> 
+                            <span class="animated-text delay-4 text-brandGold">economia</span> 
+                            <span class="animated-text delay-5">e aprovação</span> <br class="hidden md:block">
+                            <span class="animated-text delay-6">no Vale do Paraíba</span>
+                        </div>
+                    </h1>
+                    
+                    <p class="text-sm md:text-lg opacity-90 font-bold text-white leading-relaxed normal-case max-w-2xl animated-text delay-6">
+                        Entenda tudo sobre o setor e viabilidade técnica antes de investir.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRID DE ARTIGOS -->
+        <section class="py-16 md:py-28 bg-white reveal">
+            <div class="container mx-auto px-6 max-w-6xl">
+                
+                <!-- BLOCO DE INTERLINKAGEM (ESTRATÉGICO) -->
+                <div class="mb-16 text-center max-w-3xl mx-auto">
+                    <p class="text-sm font-bold uppercase tracking-tight text-brandText leading-relaxed">
+                        Se você está começando agora, recomendamos iniciar por este conteúdo:
+                        <a href="/blog/o-que-mudou-na-energia-solar-em-2026/" class="text-blue-600 underline decoration-brandGold font-black">
+                            O que mudou na energia solar em 2026
+                        </a>.
+                        Depois, entenda também quanto custa e como funciona o retorno do investimento.
+                    </p>
+                </div>
+
+                <h2 class="text-2xl font-black text-brandNavy uppercase mb-12 text-center font-sans tracking-widest">
+                    Conteúdos Recentes
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- ARTIGO 1 -->
+                    <a href="/blog/o-que-mudou-na-energia-solar-em-2026/" class="group bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 flex flex-col h-full">
+                        <div class="overflow-hidden h-48">
+                            <img src="../img/o-que-mudou-na-energia-solar-em-2026.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Mudanças Energia Solar 2026" loading="lazy" onerror="this.src='../img/painel-solar-hero-background.webp'">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-black text-brandNavy text-sm uppercase mb-3 leading-snug group-hover:text-blue-700 transition-colors font-sans">
+                                O que mudou na energia solar em 2026? Entenda antes de instalar
+                            </h3>
+                            <p class="text-xs font-bold text-brandText uppercase tracking-tight opacity-70 mb-6 flex-grow">
+                                Entenda a taxação do sol, inversão de fluxo e se ainda vale a pena investir no seu imóvel.
+                            </p>
+                            <span class="text-[9px] font-black text-brandGold uppercase tracking-widest flex items-center gap-2">
+                                Ler Artigo Completo <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- ARTIGO 2 -->
+                    <a href="/blog/quanto-custa-energia-solar/" class="group bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 flex flex-col h-full text-brandText">
+                        <div class="overflow-hidden h-48 text-white bg-brandNavy">
+                            <img src="../img/painel-solar-residencial-sjc.webp" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" alt="Quanto custa energia solar" loading="lazy">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow text-brandText">
+                            <h3 class="font-black text-brandNavy text-sm uppercase mb-3 leading-snug group-hover:text-blue-700 transition-colors font-sans text-brandNavy">
+                                Quanto custa energia solar no Vale do Paraíba em 2026?
+                            </h3>
+                            <p class="text-xs font-bold text-brandText uppercase tracking-tight opacity-70 mb-6 flex-grow text-brandText">
+                                Veja os valores médios de investimento e o tempo de retorno para casas e empresas na nossa região.
+                            </p>
+                            <span class="text-[9px] font-black text-brandGold uppercase tracking-widest flex items-center gap-2">
+                                Ler Artigo Completo <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- ARTIGO 3 -->
+                    <a href="/blog/energia-solar-valoriza-imovel/" class="group bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 flex flex-col h-full">
+                        <div class="overflow-hidden h-48 bg-brandNavy text-white">
+                            <img src="../img/painel-solar-hero-background.webp" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" alt="Valorização Imobiliária" loading="lazy">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-black text-brandNavy text-sm uppercase mb-3 leading-snug group-hover:text-blue-700 transition-colors font-sans text-brandNavy">
+                                Energia solar valoriza o imóvel? Descubra o ganho real
+                            </h3>
+                            <p class="text-xs font-bold text-brandText uppercase tracking-tight opacity-70 mb-6 flex-grow text-brandText">
+                                Saiba por que casas com geração própria são vendidas mais rápido e por valores maiores.
+                            </p>
+                            <span class="text-[9px] font-black text-brandGold uppercase tracking-widest flex items-center gap-2">
+                                Ler Artigo Completo <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- LINKAGEM COM CIDADES (SEO LOCAL) -->
+                <div class="mt-20 text-center max-w-3xl mx-auto text-brandText">
+                    <p class="text-xs font-bold uppercase tracking-tight text-brandText leading-relaxed">
+                        Veja também nossas soluções em cidades do Vale do Paraíba:
+                        <a href="../energia-solar-jacarei/" class="text-blue-600 underline">Jacareí</a>,
+                        <a href="../energia-solar-taubate/" class="text-blue-600 underline">Taubaté</a>,
+                        <a href="../energia-solar-lorena/" class="text-blue-600 underline">Lorena</a> e região.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA DE AUTORIDADE -->
+        <section class="py-20 bg-brandNavy reveal text-white text-center">
+            <div class="container mx-auto px-6 max-w-4xl text-center space-y-8 font-sans">
+                <h2 class="text-3xl font-black uppercase font-sans tracking-tighter text-white">Não tome uma decisão sem análise técnica</h2>
+                <p class="text-sm md:text-base font-bold uppercase tracking-tight leading-relaxed max-w-2xl mx-auto opacity-80 text-white">
+                    O mercado de energia solar ficou profissional. Antes de instalar, entenda se o seu imóvel está apto e qual a real economia projetada para o seu padrão de consumo.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 text-center">
+                    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Li%20seu%20blog%20e%20quero%20uma%20análise%20técnica%20do%20meu%20imóvel." 
+                       class="inline-block bg-brandGold text-brandNavy px-10 py-4 rounded-xl font-black uppercase text-xs tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-95 text-center">
+                        Simulação Gratuita no Vale
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ REFACTORADO (RSA Digital - Sincronizado) -->
+    <footer id="footer-main" class="bg-white pt-24 pb-0 font-sans border-t border-slate-100 reveal relative overflow-hidden text-brandText font-black uppercase shadow-inner leading-none uppercase text-center md:text-left">
+        <div class="container mx-auto px-6 mb-16 leading-none font-sans uppercase">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start leading-none text-brandText">
+                
+                <div class="space-y-6 leading-none font-sans text-brandText">
+                    <a href="https://fonteenergiasolarvale.com.br">
+                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans">
+                    </a>
+                    <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest leading-relaxed font-sans font-black">
+                        Referência em projetos fotovoltaicos no Vale do Paraíba. Reduza a sua fatura mensal com tecnologia de ponta.
+                    </p>
+                </div>
+
+                <div class="space-y-6 leading-none font-sans text-left">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black text-left">Institucional</h4>
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans text-left text-brandText font-black">
+                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Home</a></li>
+                        <li><a href="../sobre/" class="hover:text-brandGold transition-colors font-sans">Sobre Nós</a></li>
+                        <li><a href="../blog/" class="hover:text-brandGold transition-colors font-black font-sans">Blog Técnico</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 lg:col-span-2 leading-none font-sans text-left">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black text-left">Cidades Atendidas</h4>
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-[9px] font-black uppercase tracking-widest font-sans font-black font-black text-left text-brandText font-black">
+                        <a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-brandGold transition-all">São José dos Campos</a>
+                        <a href="../energia-solar-jacarei/" class="hover:text-brandGold transition-all">Jacareí</a>
+                        <a href="../energia-solar-taubate/" class="hover:text-brandGold transition-all">Taubaté</a>
+                        <a href="../energia-solar-pindamonhangaba/" class="hover:text-brandGold transition-all font-bold">Pindamonhangaba</a>
+                        <a href="../energia-solar-cacapava/" class="hover:text-brandGold transition-all font-bold">Caçapava</a>
+                        <a href="../energia-solar-guaratingueta/" class="hover:text-brandGold transition-all font-bold">Guaratinguetá</a>
+                        <a href="../energia-solar-lorena/" class="hover:text-brandGold transition-all font-black">Lorena</a>
+                        <a href="https://wa.me/5512996368707?text=Consultar%20outra%20região." target="_blank" class="text-brandGold font-black hover:underline uppercase tracking-tighter leading-none font-sans">Outras cidades sob consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 py-10 border-t border-white/5 pb-20 md:pb-16 px-6 text-center text-slate-400">
+            <div class="container mx-auto flex flex-col items-center justify-center gap-6 leading-none font-sans font-black">
+                <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] text-center leading-none font-sans">
+                    Fonte Energia Solar Vale - © 2026 - Gleidson Nascimento
+                </p>
+                <div class="text-[11px] text-slate-400 font-bold font-sans text-center uppercase leading-none tracking-wider font-sans">
+                    Desenvolvido por 
+                    <a href="https://wa.me/5512988052097?text=Olá%20Rafael!%20Vi%20o%20site%20da%20Fonte%20Energia%20Solar%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20RSA%20Digital." 
+                       target="_blank" 
+                       class="text-brandGold font-black hover:underline transition-all font-sans tracking-widest">RSA Digital</a> 
+                    | SOLUÇÕES DIGITAIS E GOOGLE MEU NEGÓCIO
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        if(menuBtn) menuBtn.onclick = () => { mobileNav.classList.toggle('hidden'); mobileNav.classList.toggle('flex'); };
+        const closeNav = document.getElementById('close-menu');
+        if(closeNav) closeNav.onclick = () => { mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex'); };
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+    </script>
+</body>
+</html>
