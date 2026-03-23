@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO ESTRATÉGICO - SOBRE -->
+    <title>Sobre Nós | Gleidson Nascimento | Fonte Energia Solar Vale</title>
+    <meta name="description" content="Conheça a Fonte Energia Solar Vale. Liderada por Gleidson Nascimento, oferecemos tecnologia, economia e suporte especializado no Vale do Paraíba desde 2017.">
+    <link rel="canonical" href="https://fonteenergiasolar.com.br/sobre/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre a Fonte Energia Solar Vale | Gleidson Nascimento">
+    <meta property="og:description" content="Levando economia e tecnologia fotovoltaica para famílias e empresas do Vale do Paraíba.">
+    <meta property="og:image" content="../img/logotipo-fonte-energia-solar-vale.png">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandNavy: '#07294f',
+                        brandGold: '#fdcd06',
+                        brandText: '#0f172a',
+                        whatsapp: '#25D366',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'ticker': 'ticker 8s linear infinite' },
+                    keyframes: { ticker: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; font-size: 14px; color: #0f172a; }
+        .hero-overlay { background: linear-gradient(to right, rgba(7, 41, 79, 0.96) 20%, rgba(7, 41, 79, 0.4) 100%); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body class="bg-white text-brandText antialiased overflow-x-hidden">
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20energia%20solar." 
+       target="_blank" aria-label="Falar no WhatsApp"
+       class="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300 drop-shadow-xl">
+        <img src="../img/whatsapp.svg" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'">
+    </a>
+
+    <!-- Header Sincronizado -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40 leading-none">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center leading-none">
+            <a href="https://fonteenergiasolarvale.com.br">
+                <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Fonte Energia Solar Logo" class="h-9 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-[9px] font-black tracking-widest text-brandNavy font-sans uppercase leading-none">
+                <a href="../" class="hover:text-blue-600 transition-colors font-black">Home</a>
+                <a href="../sobre/" class="text-blue-700 border-b-2 border-brandGold pb-1 font-black">Sobre</a>
+                <div class="relative group cursor-default leading-none">
+                    <span class="hover:text-blue-600 transition-colors flex items-center gap-1 uppercase font-black">Cidades <i data-lucide="chevron-down" class="w-3 h-3 text-brandGold"></i></span>
+                    <div class="absolute top-full left-0 hidden group-hover:block pt-2 min-w-[260px] animate-in fade-in zoom-in-95 leading-none z-50">
+                        <div class="bg-white shadow-2xl rounded-xl border border-slate-100 p-4">
+                            <ul class="space-y-2 text-brandNavy font-black text-[9px] uppercase tracking-wider leading-none">
+                                <li><a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">São José dos Campos <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-jacarei/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Jacareí <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-taubate/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Taubaté <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-pindamonhangaba/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Pindamonhangaba <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-cacapava/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Caçapava <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-guaratingueta/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between items-center">Guaratinguetá <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li><a href="../energia-solar-lorena/" class="hover:text-blue-600 border-b border-slate-50 pb-2 flex justify-between uppercase">Lorena <i data-lucide="chevron-right" class="w-3 h-3 opacity-30"></i></a></li>
+                                <li class="pt-3 border-t border-slate-100">
+                                    <a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região%20do%20Vale." target="_blank" class="text-brandGold font-black flex items-center gap-2 border border-brandGold/20 p-2 rounded-lg hover:bg-brandGold hover:text-brandNavy transition-all uppercase tracking-tighter">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog/" class="text-blue-600 font-black leading-none uppercase">Blog</a>
+                <a href="https://wa.me/5512996368707" target="_blank" class="bg-brandNavy text-white px-5 py-2.5 rounded-lg text-[9px] font-bold tracking-widest uppercase shadow-sm">Solicitar Estudo</a>
+            </nav>
+            <button class="lg:hidden text-brandNavy font-sans leading-none" id="mobile-menu-btn" aria-label="Abrir menu"><i data-lucide="menu" class="w-6 h-6 leading-none"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Sincronizado - COMPLETO -->
+    <div id="mobile-nav" class="fixed inset-0 bg-brandNavy z-[100] hidden flex-col p-8 text-white overflow-y-auto transition-all font-sans leading-none text-center">
+        <div class="flex justify-between items-center mb-10 leading-none text-white">
+            <span class="font-bold text-[10px] uppercase tracking-[0.3em] opacity-40">Menu Institucional</span>
+            <button id="close-menu" aria-label="Fechar menu"><i data-lucide="x" class="w-7 h-7 text-white"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-[12px] font-bold uppercase tracking-widest mb-10">
+            <a href="../">Home</a>
+            <a href="../sobre/" class="text-brandGold">Sobre Nós</a>
+            <a href="../blog/">Blog Técnico</a>
+        </div>
+        <div class="pt-8 border-t border-white/10 font-sans">
+            <p class="text-[9px] uppercase opacity-30 font-black tracking-widest mb-6 leading-none uppercase font-black">Cidades Atendidas</p>
+            <ul class="grid grid-cols-1 gap-5 text-[10px] uppercase font-bold tracking-wider text-slate-400 font-sans leading-none">
+                <li><a href="../energia-solar-sao-jose-dos-campos/">São José dos Campos</a></li>
+                <li><a href="../energia-solar-jacarei/">Jacareí</a></li>
+                <li><a href="../energia-solar-taubate/">Taubaté</a></li>
+                <li><a href="../energia-solar-pindamonhangaba/">Pindamonhangaba</a></li>
+                <li><a href="../energia-solar-cacapava/">Caçapava</a></li>
+                <li><a href="../energia-solar-guaratingueta/">Guaratinguetá</a></li>
+                <li><a href="../energia-solar-lorena/">Lorena</a></li>
+                <li class="pt-4 border-t border-white/5"><a href="https://wa.me/5512996368707?text=Gostaria%20de%20consultar%20outra%20região." target="_blank" class="text-brandGold font-black flex justify-between items-center uppercase text-[9px]">Consultar outra região <i data-lucide="message-circle" class="w-3 h-3"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SOBRE -->
+        <section class="relative min-h-[450px] flex items-center bg-brandNavy overflow-hidden reveal font-sans">
+            <div class="absolute inset-0 z-0">
+                <img src="../img/painel-solar-hero-background.webp" alt="Sobre a Fonte Energia Solar" class="w-full h-full object-cover opacity-30" loading="eager">
+                <div class="absolute inset-0 hero-overlay leading-none"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 font-sans text-center md:text-left">
+                <div class="max-w-3xl space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-sans">
+                        <span class="w-1.5 h-1.5 bg-brandGold rounded-full animate-pulse leading-none"></span>
+                        <span class="text-[8px] font-black uppercase tracking-widest text-white leading-none">Nossa História e Missão</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider leading-tight text-white font-sans">
+                        Sobre a Fonte Energia <br><span class="text-brandGold">Solar Vale</span>
+                    </h1>
+                    <p class="text-sm md:text-lg opacity-95 font-bold text-white leading-relaxed normal-case">
+                        Levando economia, tecnologia e previsibilidade financeira para famílias e empresas do Vale do Paraíba com a liderança de Gleidson Nascimento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: Gleidson e a Missão -->
+        <section class="py-16 md:py-28 bg-white reveal leading-relaxed font-sans text-brandText">
+            <div class="container mx-auto px-6 max-w-6xl text-center md:text-left">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase tracking-tighter leading-tight font-sans">
+                            Especialista Local, Resultado Real
+                        </h2>
+                        <div class="space-y-4 text-brandText text-sm md:text-base leading-relaxed font-black font-sans uppercase tracking-tight">
+                            <p>A Fonte Energia Solar Vale nasce com o objetivo de levar economia, tecnologia e previsibilidade financeira para famílias e empresas do Vale do Paraíba.</p>
+                            <p>À frente da operação está <strong>Gleidson Nascimento</strong>, especialista regional responsável por todo o atendimento, análise e acompanhamento dos projetos na região.</p>
+                            <p>Mais do que vender energia solar, o foco é entender a realidade de cada cliente e entregar uma solução personalizada, segura e altamente eficiente.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-200 shadow-xl text-center">
+                            <i data-lucide="shield-check" class="w-12 h-12 text-brandGold mx-auto mb-6"></i>
+                            <h3 class="font-black text-brandNavy uppercase text-lg mb-4">Compromisso Gleidson</h3>
+                            <p class="text-xs text-brandText font-bold leading-relaxed uppercase tracking-tight">
+                                "Cada projeto no Vale é conduzido por mim de forma próxima e estratégica, garantindo que o investimento do cliente seja inteligente e sustentável no longo prazo."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: Origem Técnica -->
+        <section class="py-20 md:py-32 bg-slate-50 reveal font-sans">
+            <div class="container mx-auto px-6 max-w-5xl text-center">
+                <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase mb-16 font-sans">Tecnologia com Base Sólida</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center text-left">
+                    <div class="space-y-6 text-brandText text-sm font-black uppercase tracking-tight leading-relaxed">
+                        <p>A marca Fonte Energia Solar teve sua origem em 2017, dentro de um ambiente técnico e acadêmico voltado a energias alternativas, com forte base em engenharia e inovação.</p>
+                        <p>Essa estrutura permite que todos os projetos sigam padrões elevados de qualidade, com equipamentos certificados e processos bem definidos — do dimensionamento à homologação técnica.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                            <div class="text-3xl font-black text-brandGold mb-2">2017</div>
+                            <div class="text-[9px] font-black text-brandNavy uppercase">Fundação Técnica</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                            <div class="text-3xl font-black text-brandGold mb-2">100%</div>
+                            <div class="text-[9px] font-black text-brandNavy uppercase">Homologado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: Soluções Completas (Cards) -->
+        <section class="py-20 md:py-32 bg-white reveal font-sans">
+            <div class="container mx-auto px-6 max-w-6xl text-center">
+                <h2 class="text-2xl md:text-3xl font-black text-brandNavy uppercase mb-16 font-sans">Soluções Completas em Energia Solar</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3 shadow-sm">
+                        <i data-lucide="bar-chart-3" class="text-brandGold"></i>
+                        <span class="text-[10px] font-black text-brandNavy uppercase text-center">Análise de Viabilidade</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3 shadow-sm">
+                        <i data-lucide="pen-tool" class="text-brandGold"></i>
+                        <span class="text-[10px] font-black text-brandNavy uppercase text-center">Projeto Técnico</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3 shadow-sm">
+                        <i data-lucide="hammer" class="text-brandGold"></i>
+                        <span class="text-[10px] font-black text-brandNavy uppercase text-center">Instalação Profissional</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3 shadow-sm">
+                        <i data-lucide="file-check-2" class="text-brandGold"></i>
+                        <span class="text-[10px] font-black text-brandNavy uppercase text-center">Homologação</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3 shadow-sm">
+                        <i data-lucide="user-check" class="text-brandGold"></i>
+                        <span class="text-[10px] font-black text-brandNavy uppercase text-center">Suporte Local</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="py-20 bg-brandNavy reveal">
+            <div class="container mx-auto px-6 max-w-4xl text-center text-white space-y-8 font-sans">
+                <h2 class="text-3xl font-black uppercase font-sans">Compromisso com o Vale do Paraíba</h2>
+                <p class="text-sm md:text-base font-bold uppercase tracking-tight leading-relaxed max-w-2xl mx-auto">
+                    Atuando em São José dos Campos, Jacareí, Taubaté, Lorena e região, nossa missão é tornar a energia solar acessível, confiável e vantajosa para quem investe no Vale.
+                </p>
+                <a href="https://wa.me/5512996368707?text=Olá%20Gleidson!%20Li%20sobre%20sua%20trajetória%20e%20queria%20fazer%20um%20projeto%20com%20você." 
+                   class="inline-block bg-brandGold text-brandNavy px-10 py-4 rounded-xl font-black uppercase text-xs tracking-widest shadow-xl">
+                    Iniciar meu Projeto no Vale
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ REFACTORADO (RSA Digital - Sincronizado) -->
+    <footer id="footer-main" class="bg-white pt-24 pb-0 font-sans border-t border-slate-100 reveal relative overflow-hidden text-brandText font-black uppercase shadow-inner leading-none uppercase">
+        <div class="container mx-auto px-6 mb-16 leading-none font-sans uppercase text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start leading-none">
+                
+                <div class="space-y-6 leading-none font-sans">
+                    <a href="https://fonteenergiasolarvale.com.br">
+                        <img src="../img/logotipo-fonte-energia-solar-vale.png" alt="Logo Fonte Energia Solar Vale" class="h-10 w-auto mx-auto md:mx-0 opacity-100 font-sans">
+                    </a>
+                    <p class="text-[10px] font-black text-brandNavy uppercase tracking-widest leading-relaxed font-sans font-black">
+                        Referência em projetos fotovoltaicos no Vale do Paraíba. Reduza a sua fatura mensal com tecnologia de ponta.
+                    </p>
+                </div>
+
+                <div class="space-y-6 leading-none font-sans">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black text-left">Institucional</h4>
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-brandText leading-none font-sans text-left">
+                        <li><a href="../" class="hover:text-brandGold transition-colors font-sans">Home</a></li>
+                        <li><a href="../sobre/" class="hover:text-brandGold transition-colors font-sans">Sobre Nós</a></li>
+                        <li><a href="../blog/" class="hover:text-brandGold transition-colors font-black font-sans">Blog Técnico</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 lg:col-span-2 leading-none font-sans">
+                    <h4 class="text-brandNavy font-black text-xs uppercase tracking-widest border-l-4 border-brandGold pl-4 font-sans uppercase leading-none font-black text-left">Cidades Atendidas</h4>
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-[9px] font-black uppercase tracking-widest font-sans font-black font-black text-left">
+                        <a href="../energia-solar-sao-jose-dos-campos/" class="hover:text-brandGold transition-all">São José dos Campos</a>
+                        <a href="../energia-solar-jacarei/" class="hover:text-brandGold transition-all">Jacareí</a>
+                        <a href="../energia-solar-taubate/" class="hover:text-brandGold transition-all">Taubaté</a>
+                        <a href="../energia-solar-pindamonhangaba/" class="hover:text-brandGold transition-all font-bold">Pindamonhangaba</a>
+                        <a href="../energia-solar-cacapava/" class="hover:text-brandGold transition-all font-bold">Caçapava</a>
+                        <a href="../energia-solar-guaratingueta/" class="hover:text-brandGold transition-all font-bold">Guaratinguetá</a>
+                        <a href="../energia-solar-lorena/" class="hover:text-brandGold transition-all font-black">Lorena</a>
+                        <a href="https://wa.me/5512996368707?text=Consultar%20outra%20região." target="_blank" class="text-brandGold font-black hover:underline uppercase tracking-tighter leading-none font-sans">Outras cidades sob consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 py-10 border-t border-white/5 pb-20 md:pb-16 px-6 text-center">
+            <div class="container mx-auto flex flex-col items-center justify-center gap-6 leading-none font-sans font-black">
+                <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.4em] text-center leading-none font-sans">
+                    Fonte Energia Solar Vale - © 2026 - Gleidson Nascimento
+                </p>
+                <div class="text-[11px] text-slate-400 font-bold font-sans text-center uppercase leading-none tracking-wider font-sans">
+                    Desenvolvido por 
+                    <a href="https://wa.me/5512988052097?text=Olá%20Rafael!%20Vi%20o%20site%20da%20Fonte%20Energia%20Solar%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20RSA%20Digital." 
+                       target="_blank" 
+                       class="text-brandGold font-black hover:underline transition-all font-sans tracking-widest">RSA Digital</a> 
+                    | SOLUÇÕES DIGITAIS E GOOGLE MEU NEGÓCIO
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        if(menuBtn) menuBtn.onclick = () => { mobileNav.classList.toggle('hidden'); mobileNav.classList.toggle('flex'); };
+        const closeNav = document.getElementById('close-menu');
+        if(closeNav) closeNav.onclick = () => { mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex'); };
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+    </script>
+</body>
+</html>
