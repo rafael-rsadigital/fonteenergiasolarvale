@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear arquivos desnecessários (opcional)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://fonteenergiasolarvale.com.br/sitemap.xml
